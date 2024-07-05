@@ -1,96 +1,111 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAEWON-PORTFOLIO</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://webfontworld.github.io/gmarket/GmarketSans.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DAEWON-PORTFOLIO</title>
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" />
-</head>
-
-<body>
-  <div id="main__gsap">
-    <div id="header">
-      <div class="logo">
-        <h1>FRONT+BACK</h1>
-        <p>PORTFOLIO</p>
-      </div>
-      <div class="menu">
-        <h1>MENU</h1>
-      </div>
-    </div>
-    <div id="content">
-      <div class="content__text">
-        <div class="content__title">
-          <h1 class="text__DEVELOP">DEVELOP</h1>
-          <h1 class="text__PORTFOLIO">PORTFOLIO</h1>
+  <body>
+    <div id="main__gsap">
+      <div id="header">
+        <div class="logo">
+          <h1>FRONT+BACK</h1>
+          <p>PORTFOLIO</p>
         </div>
-        <div class="content__sub">
-          <h1 class="text__SUPER">SUPER</h1>
+        <div class="menu">
+          <h1>MENU</h1>
         </div>
-        <h1 class="text__DAEWON">DAEWON</h1>
       </div>
-      <div class="content__cat">
-        <img src="./assets/img/main1.png" alt="#" />
+      <div id="content">
+        <div class="content__text">
+          <div class="content__title">
+            <h1 class="text__DEVELOP">DEVELOP</h1>
+            <h1 class="text__PORTFOLIO">PORTFOLIO</h1>
+          </div>
+          <div class="content__sub">
+            <h1 class="text__SUPER">SUPER</h1>
+          </div>
+          <h1 class="text__DAEWON">DAEWON</h1>
+        </div>
+        <div class="content__cat">
+          <img src="./assets/img/main1.png" alt="#" />
+        </div>
+        <div class="content__2024">
+          <img src="./assets/img/2024.png" alt="#" />
+        </div>
       </div>
-      <div class="content__2024">
-        <img src="./assets/img/2024.png" alt="#" />
-      </div>
+      <div id="content2"></div>
     </div>
-    <div id="content2"></div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-  <script>
-    const ani7 = gsap.timeline();
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script>
+      const ani7 = gsap.timeline();
 
-    ani7
-      .to(".content__title", {
-        rotate: "15deg",
-        duration: 1,
-      })
-      .to(".content__title h1", {
-        fontWeight: 400,
-        scaleX: 0,
-        x: 50,
-        duration: 1,
-      }, "-=0.3")
-      .from(".content__cat img", {
-        scale: 0.5,
-        rotate: "15deg",
-        duration: 1,
-      }, "-=0.5")
-      .to(".text__SUPER", {
-        fontSize: "11vw",
-        fontWeight: 900,
-        rotate: "-30deg",
-        duration: 1,
-      }, "-=0.8")
-      .to(".text__DAEWON", {
-        fontSize: "11vw",
-        fontWeight: 900,
-        rotate: "-10deg",
-        duration: 1,
-        opacity: 1
-      }, "-=0.2")
+      ani7
+        .to(".content__title", {
+          rotate: "15deg",
+          duration: 1,
+        })
+        .to(
+          ".content__title h1",
+          {
+            fontWeight: 400,
+            scaleX: 0,
+            x: 50,
+            duration: 1,
+          },
+          "-=0.3"
+        )
+        .from(
+          ".content__cat img",
+          {
+            scale: 0.5,
+            rotate: "15deg",
+            duration: 1,
+          },
+          "-=0.5"
+        )
+        .to(
+          ".text__SUPER",
+          {
+            fontSize: "11vw",
+            fontWeight: 900,
+            rotate: "-30deg",
+            duration: 1,
+          },
+          "-=0.8"
+        )
+        .to(
+          ".text__DAEWON",
+          {
+            fontSize: "10vw",
+            fontWeight: 900,
+            rotate: "-10deg",
+            duration: 1,
+            opacity: 1,
+          },
+          "-=0.2"
+        );
 
-
-    ScrollTrigger.create({
-      animation: ani7,
-      trigger: "#main__gsap",
-      ease: "Power3.easeInOut",
-      start: "top top",
-      end: "+=1000",
-      scrub: 1,
-      pin: true,
-      anticipatePin: 1,
-      markers: true,
-    });
-
-  </script>
-</body>
-
+      ScrollTrigger.create({
+        animation: ani7,
+        trigger: "#content",
+        ease: "Power3.easeInOut",
+        start: "top top",
+        end: "+=1000",
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+        markers: true,
+      });
+    </script>
+  </body>
 </html>
