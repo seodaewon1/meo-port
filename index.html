@@ -16,95 +16,55 @@
       <div id="header">
         <div class="logo">
           <h1>FRONT+BACK</h1>
-          <p>PORTFOLIO</p>
+          <span>PORTFOLIO</span>
         </div>
-        <div class="menu">
-          <h1>MENU</h1>
+        <div class="nav"><h1>MENU</h1></div>
+      </div>
+      <div id="section1">
+        <div class="center">
+          <div class="img"></div>
+          <div class="text1">super</div>
+          <div class="text2">creative</div>
+          <div class="text3">daewon</div>
         </div>
       </div>
-      <div id="content">
-        <div class="content__text">
-          <div class="content__title">
-            <h1 class="text__DEVELOP">DEVELOP</h1>
-            <h1 class="text__PORTFOLIO">PORTFOLIO</h1>
-          </div>
-          <div class="content__sub">
-            <h1 class="text__SUPER">SUPER</h1>
-          </div>
-          <h1 class="text__DAEWON">DAEWON</h1>
-        </div>
-        <div class="content__cat">
-          <img src="./assets/img/main1.png" alt="#" />
-        </div>
-        <div class="content__2024">
-          <img src="./assets/img/2024.png" alt="#" />
-        </div>
-      </div>
-      <div id="content2"></div>
+      <div id="section2"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
     <script>
-      const ani7 = gsap.timeline();
+      const lenis = new Lenis()
 
-      ani7
-        .to(".content__title", {
-          rotate: "15deg",
-          duration: 1,
-        })
-        .to(
-          ".content__title h1",
-          {
-            fontWeight: 400,
-            scaleX: 0,
-            x: 50,
-            duration: 1,
-          },
-          "-=0.3"
-        )
-        .from(
-          ".content__cat img",
-          {
-            scale: 0.5,
-            rotate: "15deg",
-            duration: 1,
-          },
-          "-=0.5"
-        )
-        .to(
-          ".text__SUPER",
-          {
-            fontSize: "11vw",
-            fontWeight: 900,
-            rotate: "-30deg",
-            duration: 1,
-          },
-          "-=0.8"
-        )
-        .to(
-          ".text__DAEWON",
-          {
-            fontSize: "10vw",
-            fontWeight: 900,
-            rotate: "-10deg",
-            duration: 1,
-            opacity: 1,
-          },
-          "-=0.2"
-        );
+      lenis.on('scroll', (e) => {
+      console.log(e)
+      })
+
+      function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+      }
+
+      requestAnimationFrame(raf)
+      const ani1 = gsap.timeline();
+
+      ani1.to("#section1 .center .img", { rotation: 720, scale: 1,duration:1 })
+          .to("#section1 .center .text1", { rotation: 720 ,  scale: 0,duration:1,}, 0)
+          .to("#section1 .center .text2", { rotation: -380 ,scale: 1, duration:1}, 0.7)
+          .to("#section1 .center .text3", { rotation: -400 ,scale: 1, duration:1}, 0.7)
 
       ScrollTrigger.create({
-        animation: ani7,
-        trigger: "#content",
-        ease: "Power3.easeInOut",
+        animation: ani1,
+        trigger: "#section1",
         start: "top top",
-        end: "+=1000",
-        scrub: 1,
+        end: "+=10000",
+        ease: "power1.inOut",
+        scrub: true,
         pin: true,
         anticipatePin: 1,
-        markers: true,
+        markers: false,
       });
     </script>
   </body>

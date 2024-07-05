@@ -1,5 +1,7 @@
+@import url("https://websfont.github.io/websfont/websfont.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
-  font-family: "Poppins";
+  font-family: "gmarket";
   background-color: #f04822;
   margin: 0;
   padding: 0;
@@ -12,140 +14,70 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-#main__gsap {
-}
-
 #header {
-  padding: 40px 36px;
+  font-family: "Poppins";
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   z-index: 100;
+  color: #fff;
+  position: fixed;
+  line-height: 5px;
+  width: 100%;
+  box-sizing: border-box;
 }
-
 .logo {
-  line-height: 8px;
 }
-
 .logo h1 {
   font-size: 30px;
-  font-weight: 800;
-  color: #fff;
 }
-
-.logo p {
+.logo span {
   font-size: 24px;
-  font-weight: 300;
-  color: #fff;
   letter-spacing: 10px;
 }
-
-.menu h1 {
+.nav h1 {
   font-size: 30px;
   font-weight: 800;
+}
+#section1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#section1 .center {
+  font-family: "gmarket";
+  font-size: 13vw;
+  font-weight: 800;
   color: #fff;
+  letter-spacing: -10px;
+  text-transform: uppercase;
 }
-
-#content {
-  font-family: "GmarketSans";
-  width: 100vw;
-  height: calc(100vh - 160px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.content__text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  /* 텍스트를 이미지 위에 오도록 설정 */
-}
-
-.content__title {
-  font-size: 5rem;
-  font-weight: 900;
-  line-height: 7vw;
-  position: relative;
-  transform: rotate(350deg);
-  z-index: 4;
-}
-
-.content__title h1 {
-  will-change: transform;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(-15deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
-  font-weight: 900;
-}
-
-.content__title .text__DEVELOP {
-  color: #fff;
-  margin: 0;
-  position: relative;
-  bottom: -2vh;
-  right: 10vw;
-  font-weight: 900;
-}
-
-.content__title .text__PORTFOLIO {
-  color: #fff;
-  margin: 0;
-  position: relative;
-  top: -2vh;
-  right: -10vw;
-  font-weight: 900;
-}
-
-.content__cat img {
-  width: 30%;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotateZ(0deg);
-  z-index: 1;
-  mix-blend-mode: difference;
-}
-
-.content__sub {
-  position: absolute;
+#section1 .center > div {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
-  mix-blend-mode: hard-light;
-}
-
-.text__SUPER {
-  color: #000000;
-  font-size: 5vw;
-  font-weight: 300;
-}
-
-.text__DAEWON {
-  color: #fff;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotateZ(10deg);
-  font-size: 5vw;
-  font-weight: 800;
-  z-index: 2;
-  opacity: 0;
 }
-
-.content__2024 img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 48px;
+#section1 .center > div.img {
+  background-image: url(../img/서대원.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 30vw;
+  height: 30vw;
+  transform: translate(-50%, -50%) scale(0);
 }
-
-#content2 {
-  width: 100vw;
-  height: 100vh;
-  background-color: #000000;
+#section1 .center > div.text1 {
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%) scale(1);
+}
+#section1 .center > div.text2 {
+  transform: translate(-50%, -50%) scale(0);
+}
+#section1 .center > div.text3 {
+  transform: translate(-50%, -50%) scale(0);
+}
+#section2{
+  width: 100%;
+  height: 2000px;
 }
