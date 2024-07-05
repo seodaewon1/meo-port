@@ -75,7 +75,9 @@ body::-webkit-scrollbar {
   transform: translate(-50%, -50%) scale(0);
 }
 #section1 .center > div.text3 {
+  color: #000;
   transform: translate(-50%, -50%) scale(0);
+  
 }
 #section2{
   width: 100%;
