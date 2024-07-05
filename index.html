@@ -27,8 +27,28 @@
           <div class="text2">creative</div>
           <div class="text3">daewon</div>
         </div>
+        <div class="img2024"></div>
       </div>
-      <div id="section2"></div>
+      <div id="section2">
+        <div class="center">
+          <div class="img2">
+            <div class="img2-1"></div>
+            <div class="img2-2"></div>
+            <div class="img2-3"></div>
+            <div class="img2-4"></div>
+            <div class="img2-5"></div>
+            <div class="img2-6"></div>
+          </div>
+          <div class="text2">
+            <div class="text2-1"><h1>html/css</h1></div>
+            <div class="text2-2"><h1>javascript</h1></div>
+            <div class="text2-3"><h1>react.js</h1></div>
+            <div class="text2-4"><h1>next.js</h1></div>
+            <div class="text2-5"><h1>node.js</h1></div>
+          </div>
+        </div>
+       
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -50,10 +70,11 @@
       requestAnimationFrame(raf)
       const ani1 = gsap.timeline();
 
-      ani1.to("#section1 .center .img", { rotation: 720, scale: 1,duration:1 })
-          .to("#section1 .center .text1", { rotation: 720 ,  scale: 0,duration:1,}, 0)
-          .to("#section1 .center .text2", { rotation: -330 ,scale: 1, duration:1}, 0.5)
-          .to("#section1 .center .text3", { rotation: 330 ,scale: 1, duration:1}, 0.5)
+      ani1.to("#section1 .center .img", { rotation: 360, scale: 1,duration:1 })
+          .to("#section1 .center .text1", { rotation: 360 ,  scale: 0,duration:1,}, 0)
+          .to("#section1 .center .text2", { rotation: 370 ,scale: 1, duration:1}, 0.5)
+          .to("#section1 .center .text3", { rotation: -370 ,scale: 1, duration:1}, 0.5)
+          .to("#section1 .img2024", { y: -200, duration:1}, 0.6)
 
       ScrollTrigger.create({
         animation: ani1,
@@ -65,6 +86,22 @@
         pin: true,
         anticipatePin: 1,
         markers: false,
+      });
+
+      const ani2 = gsap.timeline();
+
+      ani2.to( "#section2 .center .text2 h1",{ fontWeight: 800,
+        scaleX: 1.2,
+        duration: 1, })
+
+      ScrollTrigger.create({
+        animation: ani2,
+        trigger: "#section2",
+        start: "top 80%",
+        end: "bottom 20%",
+        ease: "power1.inOut",
+        scrub: true,
+        markers: true,
       });
     </script>
   </body>
