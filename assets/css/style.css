@@ -1,17 +1,19 @@
 @import url("https://websfont.github.io/websfont/websfont.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
   font-family: "gmarket";
   background-color: #f04822;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: auto; /* 스크롤 가능 */
+  overflow: auto;
+  /* 스크롤 가능 */
 }
 
 /* 웹킷 기반 브라우저에서 스크롤바 숨기기 */
 body::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 #header {
@@ -26,25 +28,30 @@ body::-webkit-scrollbar {
   width: 100%;
   box-sizing: border-box;
 }
-.logo {
-}
+
+.logo {}
+
 .logo h1 {
   font-size: 30px;
 }
+
 .logo span {
   font-size: 24px;
   letter-spacing: 10px;
 }
+
 .nav h1 {
   font-size: 30px;
   font-weight: 800;
 }
+
 #section1 {
   width: 100%;
   height: 100vh;
   position: relative;
   /* display: none; */
 }
+
 #section1 .center {
   font-family: "Poppins";
   font-size: 18vw;
@@ -53,14 +60,16 @@ body::-webkit-scrollbar {
   letter-spacing: -15px;
   text-transform: uppercase;
 }
-#section1 .center > div {
+
+#section1 .center>div {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
 }
-#section1 .center > div.img {
-  background-image: url(../img/서대원.jpg);
+
+#section1 .center>div.img {
+  background-image: url(../img/daewon.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -68,51 +77,189 @@ body::-webkit-scrollbar {
   height: 30vw;
   transform: translate(-50%, -50%) scale(0);
 }
-#section1 .center > div.text1 {
+
+#section1 .center>div.text1 {
   mix-blend-mode: difference;
   transform: translate(-50%, -50%) scale(1);
 }
-#section1 .center > div.text2 {
+
+#section1 .center>div.text2 {
   transform: translate(-50%, -50%) scale(0);
 }
-#section1 .center > div.text3 {
+
+#section1 .center>div.text3 {
   color: #000;
   z-index: 0;
   transform: translate(-50%, -50%) scale(0);
 
 }
 
-#section1 .img2024{
-background-image: url(../img/2024.png);
-width: 150px;
-height: 200px;
-background-size: contain;
-position: absolute;
-right: 48px;
-bottom: -200px;
+#section1 .img2024 {
+  background-image: url(../img/2024.png);
+  width: 150px;
+  height: 200px;
+  background-size: contain;
+  position: absolute;
+  right: 48px;
+  bottom: -200px;
 }
-#section2{
+
+/* section2 */
+#section2 {
   width: 100%;
-  height: 4000px;
+  height: 500vh;
   background-color: #000;
   color: #fff;
+  position: relative;
 }
 
-#section2 .center{
+#section2 .center {
   text-align: center;
-
   color: #fff;
   letter-spacing: -10px;
   text-transform: uppercase;
 }
-#section2 .center .text2{
-  padding-top: 5vw;
+
+#section2 .center .s_text2 {}
+
+/* section2 text */
+.text2-1 {
+  padding: 15vw 0;
 }
-#section2 .center .text2 h1{
+
+.text2-1 h1 {
+
   font-size: 5vw;
   font-weight: 300;
-  padding: 15vw 0; 
-  will-change: transform;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
+  transform: scaleX(0.5);
+}
+
+.text2-2 {
+  padding: 15vw 0;
+}
+
+.text2-2 h1 {
+  font-size: 5vw;
+  font-weight: 300;
+  transform: scaleX(0.5);
+}
+
+.text2-3 {
+  padding: 15vw 0;
+}
+
+.text2-3 h1 {
+  font-size: 5vw;
+  font-weight: 300;
+  transform: scaleX(0.5);
+}
+
+.text2-4 {
+  padding: 15vw 0;
+}
+
+.text2-4 h1 {
+  font-size: 5vw;
+  font-weight: 300;
+  transform: scaleX(0.5);
+}
+
+.text2-5 {
+  padding: 15vw 0;
+}
+
+.text2-5 h1 {
+
+  font-size: 5vw;
+  font-weight: 300;
+  transform: scaleX(0.5);
+}
+
+/* section2 img */
+#section2 .center .img2 .img2-1 {
+  object-fit: cover;
+  top: 10vw;
+  left: 10vw;
+  position: absolute;
+  rotate: -15deg;
+}
+
+#section2 .center .img2 .img2-1 img {
+  width: 20vw;
+  height: 20%;
+}
+
+#section2 .center .img2 .img2-2 {
+  object-fit: cover;
+  top: 30vw;
+  right: 10vw;
+  position: absolute;
+  rotate: 18deg;
+}
+
+#section2 .center .img2 .img2-2 img {
+  width: 30vw;
+  height: 20%;
+}
+
+#section2 .center .img2 .img2-3 {
+  object-fit: cover;
+  position: absolute;
+  top: 81vw;
+  left: 15vw;
+}
+
+#section2 .center .img2 .img2-3 img {
+  width: 25vw;
+  height: 20%;
+}
+
+#section2 .center .img2 .img2-4 {
+  object-fit: cover;
+  position: absolute;
+  top: 129vw;
+  right: 11vw;
+}
+
+#section2 .center .img2 .img2-4 img {
+  width: 35vw;
+  height: 20%;
+}
+
+#section2 .center .img2 .img2-5 {
+  object-fit: cover;
+  position: absolute;
+  top: 182vw;
+  left: 18vw;
+}
+
+#section2 .center .img2 .img2-5 img {
+  width: 20vw;
+  height: 20%;
+}
+
+#section2 .center .img2 .img2-6 {
+  object-fit: cover;
+  position: absolute;
+  top: 235vw;
+  right: 22vw;
+
+}
+
+#section2 .center .img2 .img2-6 img {
+  width: 25vw;
+  height: 20%;
+}
+
+#section2 .center .img2 .img2-7 {
+  object-fit: cover;
+  position: absolute;
+  top: 252vw;
+  left: 4vw;
+  rotate: 24deg;
+}
+
+#section2 .center .img2 .img2-7 img {
+  width: 23vw;
+  height: 20%;
 }

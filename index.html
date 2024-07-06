@@ -1,108 +1,141 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DAEWON-PORTFOLIO</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      href="https://webfontworld.github.io/gmarket/GmarketSans.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <div id="main__gsap">
-      <div id="header">
-        <div class="logo">
-          <h1>FRONT+BACK</h1>
-          <span>PORTFOLIO</span>
-        </div>
-        <div class="nav"><h1>MENU</h1></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DAEWON-PORTFOLIO</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="main__gsap">
+    <div id="header">
+      <div class="logo">
+        <h1>FRONT+BACK</h1>
+        <span>PORTFOLIO</span>
       </div>
-      <div id="section1">
-        <div class="center">
-          <div class="img"></div>
-          <div class="text1">super</div>
-          <div class="text2">creative</div>
-          <div class="text3">daewon</div>
-        </div>
-        <div class="img2024"></div>
-      </div>
-      <div id="section2">
-        <div class="center">
-          <div class="img2">
-            <div class="img2-1"></div>
-            <div class="img2-2"></div>
-            <div class="img2-3"></div>
-            <div class="img2-4"></div>
-            <div class="img2-5"></div>
-            <div class="img2-6"></div>
-          </div>
-          <div class="text2">
-            <div class="text2-1"><h1>html/css</h1></div>
-            <div class="text2-2"><h1>javascript</h1></div>
-            <div class="text2-3"><h1>react.js</h1></div>
-            <div class="text2-4"><h1>next.js</h1></div>
-            <div class="text2-5"><h1>node.js</h1></div>
-          </div>
-        </div>
-       
+      <div class="nav">
+        <h1>MENU</h1>
       </div>
     </div>
+    <div id="section1">
+      <div class="center">
+        <div class="img"></div>
+        <div class="text1">super</div>
+        <div class="text2">creative</div>
+        <div class="text3">daewon</div>
+      </div>
+      <div class="img2024"></div>
+    </div>
+    <div id="section2">
+      <div class="center">
+        <div class="img2">
+          <div class="img2-1">
+            <img src="/assets/img/section2-1.jpg" alt="#">
+          </div>
+          <div class="img2-2">
+            <img src="/assets/img/section2-2.jpg" alt="#">
+          </div>
+          <div class="img2-3">
+            <img src="/assets/img/section2-3.jpg" alt="#">
+          </div>
+          <div class="img2-4">
+            <img src="/assets/img/section2-4.jpg" alt="#">
+          </div>
+          <div class="img2-5">
+            <img src="/assets/img/section2-5.jpg" alt="#">
+          </div>
+          <div class="img2-6">
+            <img src="/assets/img/section2-6.jpg" alt="#">
+          </div>
+          <div class="img2-7">
+            <img src="/assets/img/section2-7.jpg" alt="#">
+          </div>
+        </div>
+        <div class="s_text2">
+          <div class="text2-1">
+            <h1>html/css</h1>
+          </div>
+          <div class="text2-2">
+            <h1>javascript</h1>
+          </div>
+          <div class="text2-3">
+            <h1>react.js</h1>
+          </div>
+          <div class="text2-4">
+            <h1>next.js</h1>
+          </div>
+          <div class="text2-5">
+            <h1>node.js</h1>
+          </div>
+        </div>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
-    <script>
-      const lenis = new Lenis()
+    </div>
+  </div>
 
-      lenis.on('scroll', (e) => {
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
+  <script>
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
       console.log(e)
-      })
+    })
 
-      function raf(time) {
+    function raf(time) {
       lenis.raf(time)
       requestAnimationFrame(raf)
-      }
+    }
 
-      requestAnimationFrame(raf)
-      const ani1 = gsap.timeline();
+    requestAnimationFrame(raf)
+    const ani1 = gsap.timeline();
 
-      ani1.to("#section1 .center .img", { rotation: 360, scale: 1,duration:1 })
-          .to("#section1 .center .text1", { rotation: 360 ,  scale: 0,duration:1,}, 0)
-          .to("#section1 .center .text2", { rotation: 370 ,scale: 1, duration:1}, 0.5)
-          .to("#section1 .center .text3", { rotation: -370 ,scale: 1, duration:1}, 0.5)
-          .to("#section1 .img2024", { y: -200, duration:1}, 0.6)
+    ani1.to("#section1 .center .img", { rotation: 360, scale: 1 })
+      .to("#section1 .center .text1", { rotation: 360, scale: 0, duration: 1, }, 0)
+      .to("#section1 .center .text2", { rotation: 370, scale: 1, duration: 1 }, 0.5)
+      .to("#section1 .center .text3", { rotation: -370, scale: 1, duration: 1 }, 0.5)
+      .to("#section1 .img2024", { y: -200, duration: 1 }, 0.6)
 
+    ScrollTrigger.create({
+      animation: ani1,
+      trigger: "#section1",
+      start: "top top",
+      end: "+=10000",
+      ease: "power1.inOut",
+      scrub: true,
+      pin: true,
+      anticipatePin: 1,
+      markers: false,
+    });
+
+
+    function createTextAnimation(selector) {
+      const tl = gsap.timeline();
+      tl.to(selector, { fontSize: "10vw", fontWeight: 800, scaleX: 1, duration: 0.1 });
       ScrollTrigger.create({
-        animation: ani1,
-        trigger: "#section1",
-        start: "top top",
-        end: "+=10000",
-        ease: "power1.inOut",
-        scrub: true,
-        pin: true,
-        anticipatePin: 1,
-        markers: false,
-      });
-
-      const ani2 = gsap.timeline();
-
-      ani2.to( "#section2 .center .text2 h1",{ fontWeight: 800,
-        scaleX: 1.2,
-        duration: 1, })
-
-      ScrollTrigger.create({
-        animation: ani2,
-        trigger: "#section2",
-        start: "top 80%",
-        end: "bottom 20%",
-        ease: "power1.inOut",
+        animation: tl,
+        trigger: selector,
+        start: "top 80%", // 필요한 경우 조정
+        end: "bottom 20%", // 필요한 경우 조정
         scrub: true,
         markers: true,
+        ease: "power1.inOut"
       });
-    </script>
-  </body>
+    }
+
+    // 각 텍스트 요소에 대한 애니메이션 생성
+    createTextAnimation(".text2-1 h1");
+    createTextAnimation(".text2-2 h1");
+    createTextAnimation(".text2-3 h1");
+    createTextAnimation(".text2-4 h1");
+    createTextAnimation(".text2-5 h1");
+
+  </script>
+</body>
+
 </html>
