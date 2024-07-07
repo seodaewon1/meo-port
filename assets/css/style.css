@@ -142,6 +142,7 @@ body::-webkit-scrollbar {
   font-size: 5vw;
   font-weight: 300;
   transform: scaleX(0.5);
+  mix-blend-mode: difference;
 }
 
 /* section2 img */
@@ -163,14 +164,15 @@ body::-webkit-scrollbar {
 #section2 .center .img2 .img2-2 {
   object-fit: cover;
   top: 30vh;
-  right: 10vw;
+  right: 5vw;
   position: absolute;
   rotate: 18deg;
 }
 
 #section2 .center .img2 .img2-2 p {
   position: absolute;
-  right: 12%;
+  font-size: 1vw;
+  right: 14%;
   bottom: 0;
   letter-spacing: normal;
 }
@@ -205,7 +207,7 @@ body::-webkit-scrollbar {
 
 #section2 .center .img2 .img2-3 p {
   position: absolute;
-  right: 12%;
+  left: 18%;
   bottom: 0;
   font-size: 1vw;
   letter-spacing: normal;
@@ -218,7 +220,7 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   background-color: #fff;
   position: absolute;
-  right: -40px;
+  left: -40px;
   bottom: -30px;
 }
 
@@ -239,6 +241,7 @@ body::-webkit-scrollbar {
   position: absolute;
   right: 12%;
   bottom: 0;
+  font-size: 1vw;
   letter-spacing: normal;
 }
 
@@ -264,11 +267,13 @@ body::-webkit-scrollbar {
 #section2 .center .img2 .img2-5 img {
   width: 20vw;
   height: 20%;
+  position: relative;
 }
 
 #section2 .center .img2 .img2-5 p {
   position: absolute;
-  right: 12%;
+  font-size: 1vw;
+  right: 8%;
   bottom: 0;
   letter-spacing: normal;
 }
@@ -280,7 +285,7 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   background-color: #fff;
   position: absolute;
-  right: -40px;
+  left: -40px;
   bottom: -30px;
 }
 
@@ -295,13 +300,16 @@ body::-webkit-scrollbar {
 #section2 .center .img2 .img2-6 img {
   width: 25vw;
   height: 20%;
+
 }
 
 #section2 .center .img2 .img2-6 p {
   position: absolute;
-  right: 12%;
+  right: 15%;
   bottom: 0;
   letter-spacing: normal;
+  font-size: 1vw;
+
 }
 
 #section2 .center .img2 .img2-6 a {
@@ -313,7 +321,9 @@ body::-webkit-scrollbar {
   position: absolute;
   right: -40px;
   bottom: -30px;
+
 }
+
 
 #section2 .center .img2 .img2-7 {
   object-fit: cover;

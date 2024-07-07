@@ -39,18 +39,19 @@
           <div class="img2-2">
             <img src="/assets/img/section2-2.jpg" alt="#">
             <p>웹표준을 준수한 사이트 제작</p>
-            <a href="#"></a>
+            <a href="#">
+            </a>
           </div>
           <div class="img2-3">
             <img src="/assets/img/section2-3.jpg" alt="#">
             <p>자바스크립트를 이용한 퀴즈 게임</p>
-            <a href="#"></a>
+            <a href="#"><span class="svg"></span></a>
           </div>
           <div class="img2-4">
             <img src="/assets/img/section2-4.jpg" alt="#">
             <p>리액트와 API를 활용한 플레이 리스트 사이트</p>
             <a href="#">
-              <img src="" alt="">
+
             </a>
           </div>
           <div class="img2-5">
@@ -126,7 +127,6 @@
       markers: false,
     });
 
-
     function createTextAnimation(selector) {
       const tl = gsap.timeline();
       tl.to(selector, { fontSize: "10vw", fontWeight: 800, scaleX: 1, duration: 0.1 });
@@ -136,18 +136,40 @@
         start: "top 70%",
         end: "bottom 70%",
         scrub: true,
-        markers: true,
+        markers: false,
         ease: "power1.inOut"
       });
     }
 
-    // 각 텍스트 요소에 대한 애니메이션 생성
+    // Function to create image animation
+    function createImageAnimation(selector, duration = 0.5, delay = 0) {
+      const tl = gsap.timeline();
+      tl.fromTo(selector, { y: 100 }, { y: 0, duration: duration, delay: delay, ease: "power1.inOut" });
+      ScrollTrigger.create({
+        animation: tl,
+        trigger: selector,
+        start: "top 80%",
+        end: "bottom 70%",
+        scrub: true,
+        markers: true,
+      });
+    }
+
+    // Apply text animations
     createTextAnimation(".text2-1 h1");
     createTextAnimation(".text2-2 h1");
     createTextAnimation(".text2-3 h1");
     createTextAnimation(".text2-4 h1");
     createTextAnimation(".text2-5 h1");
 
+    // Apply image animations
+    createImageAnimation(".img2-1", 1, 0.1);
+    createImageAnimation(".img2-2", 1, 0.1);
+    createImageAnimation(".img2-3", 1, 0.1);
+    createImageAnimation(".img2-4", 1, 0.1);
+    createImageAnimation(".img2-5", 1, 0.1);
+    createImageAnimation(".img2-6", 1, 0.1);
+    createImageAnimation(".img2-7", 1, 0.1);
 
 
 
