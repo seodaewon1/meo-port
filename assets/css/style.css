@@ -1,6 +1,65 @@
 @import url("https://websfont.github.io/websfont/websfont.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@font-face {
+  font-family: 'Marvin Visions Variable';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/MarvinVisionsTrial-Variable.ttf");
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #1b1b1d;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+body:after {
+  content: '';
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/texture.svg);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.2;
+  filter: invert(1);
+  background-size: cover;
+}
+
+.quote {
+  --weight: 10;
+  font-family: 'Marvin Visions Variable';
+  font-size: 6.5rem;
+  font-weight: 170;
+  background-size: contain;
+  line-height: 0.8;
+  margin: 0;
+  text-align: center;
+  white-space: pre-line;
+  letter-spacing: 10px;
+}
+
+.quote>* {
+  color: hwb(0 100% 0%);
+  font-variation-settings: 'wght' var(--weight);
+}
+
+.grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
 body {
   font-family: "gmarket";
   background-color: #f04822;
@@ -14,6 +73,10 @@ body {
 /* 웹킷 기반 브라우저에서 스크롤바 숨기기 */
 body::-webkit-scrollbar {
   /* display: none; */
+}
+
+#main__gsap {
+  width: 100%;
 }
 
 #header {
@@ -106,7 +169,7 @@ body::-webkit-scrollbar {
 
 /* section2 */
 #section2 {
-  width: 100vw;
+  width: 100%;
   height: 500%;
   background-color: #000;
   color: #fff;
@@ -116,12 +179,12 @@ body::-webkit-scrollbar {
 #section2 .center {
   text-align: center;
   color: #fff;
-  letter-spacing: -10px;
   text-transform: uppercase;
 }
 
 #section2 .center .s_text2 {
   padding-top: 30vh;
+  height: 500vh;
 }
 
 /* section2 text */
@@ -139,9 +202,8 @@ body::-webkit-scrollbar {
 .text2-3 h1,
 .text2-4 h1,
 .text2-5 h1 {
-  font-size: 5vw;
-  font-weight: 300;
-  transform: scaleX(0.5);
+  font-size: 10vw;
+  font-weight: 800;
   mix-blend-mode: difference;
 }
 
@@ -154,6 +216,50 @@ body::-webkit-scrollbar {
   rotate: -15deg;
 }
 
+#section2 .center .img2 .img2-2 {
+  object-fit: cover;
+  top: 36vh;
+  right: 7vw;
+  position: absolute;
+  rotate: 18deg;
+}
+
+#section2 .center .img2 .img2-3 {
+  object-fit: cover;
+  position: absolute;
+  top: 137vh;
+  left: 18vw;
+}
+
+#section2 .center .img2 .img2-4 {
+  object-fit: cover;
+  position: absolute;
+  top: 233vh;
+  right: 17vw;
+  rotate: -15deg;
+}
+
+#section2 .center .img2 .img2-5 {
+  object-fit: cover;
+  position: absolute;
+  top: 320vh;
+  left: 22vw;
+}
+
+#section2 .center .img2 .img2-6 {
+  object-fit: cover;
+  position: absolute;
+  top: 427vh;
+  right: 20vw;
+}
+
+#section2 .center .img2 .img2-7 {
+  object-fit: cover;
+  position: absolute;
+  top: 450vh;
+  left: 10vw;
+  rotate: 24deg;
+}
 
 #section2 .center .img2 .img2-1 img {
   width: 20vw;
@@ -161,12 +267,36 @@ body::-webkit-scrollbar {
   position: relative;
 }
 
-#section2 .center .img2 .img2-2 {
-  object-fit: cover;
-  top: 30vh;
-  right: 5vw;
-  position: absolute;
-  rotate: 18deg;
+#section2 .center .img2 .img2-2 img {
+  width: 30vw;
+  height: 20%;
+}
+
+#section2 .center .img2 .img2-3 img {
+  width: 25vw;
+  height: 20%;
+}
+
+#section2 .center .img2 .img2-4 img {
+  width: 25vw;
+  height: 20%;
+}
+
+#section2 .center .img2 .img2-5 img {
+  width: 20vw;
+  height: 20%;
+  position: relative;
+}
+
+#section2 .center .img2 .img2-6 img {
+  width: 25vw;
+  height: 20%;
+
+}
+
+#section2 .center .img2 .img2-7 img {
+  width: 23vw;
+  height: 20%;
 }
 
 #section2 .center .img2 .img2-2 p {
@@ -175,6 +305,40 @@ body::-webkit-scrollbar {
   right: 14%;
   bottom: 0;
   letter-spacing: normal;
+}
+
+
+#section2 .center .img2 .img2-3 p {
+  position: absolute;
+  left: 18%;
+  bottom: 0;
+  font-size: 1vw;
+  letter-spacing: normal;
+}
+
+#section2 .center .img2 .img2-4 p {
+  position: absolute;
+  right: 12%;
+  bottom: 0;
+  font-size: 1vw;
+  letter-spacing: normal;
+}
+
+#section2 .center .img2 .img2-5 p {
+  position: absolute;
+  font-size: 1vw;
+  right: 8%;
+  bottom: 0;
+  letter-spacing: normal;
+}
+
+#section2 .center .img2 .img2-6 p {
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  letter-spacing: normal;
+  font-size: 1vw;
+
 }
 
 #section2 .center .img2 .img2-2 a {
@@ -188,31 +352,6 @@ body::-webkit-scrollbar {
   bottom: -30px;
 }
 
-#section2 .center .img2 .img2-2 img {
-  width: 30vw;
-  height: 20%;
-}
-
-#section2 .center .img2 .img2-3 {
-  object-fit: cover;
-  position: absolute;
-  top: 159vh;
-  left: 17vw;
-}
-
-#section2 .center .img2 .img2-3 img {
-  width: 25vw;
-  height: 20%;
-}
-
-#section2 .center .img2 .img2-3 p {
-  position: absolute;
-  left: 18%;
-  bottom: 0;
-  font-size: 1vw;
-  letter-spacing: normal;
-}
-
 #section2 .center .img2 .img2-3 a {
   display: inline-block;
   width: 90px;
@@ -224,26 +363,7 @@ body::-webkit-scrollbar {
   bottom: -30px;
 }
 
-#section2 .center .img2 .img2-4 {
-  object-fit: cover;
-  position: absolute;
-  top: 267vh;
-  right: 9vw;
-  rotate: -15deg;
-}
 
-#section2 .center .img2 .img2-4 img {
-  width: 35vw;
-  height: 20%;
-}
-
-#section2 .center .img2 .img2-4 p {
-  position: absolute;
-  right: 12%;
-  bottom: 0;
-  font-size: 1vw;
-  letter-spacing: normal;
-}
 
 #section2 .center .img2 .img2-4 a {
   display: inline-block;
@@ -257,26 +377,6 @@ body::-webkit-scrollbar {
 }
 
 
-#section2 .center .img2 .img2-5 {
-  object-fit: cover;
-  position: absolute;
-  top: 366vh;
-  left: 19vw;
-}
-
-#section2 .center .img2 .img2-5 img {
-  width: 20vw;
-  height: 20%;
-  position: relative;
-}
-
-#section2 .center .img2 .img2-5 p {
-  position: absolute;
-  font-size: 1vw;
-  right: 8%;
-  bottom: 0;
-  letter-spacing: normal;
-}
 
 #section2 .center .img2 .img2-5 a {
   display: inline-block;
@@ -289,28 +389,6 @@ body::-webkit-scrollbar {
   bottom: -30px;
 }
 
-#section2 .center .img2 .img2-6 {
-  object-fit: cover;
-  position: absolute;
-  top: 476vh;
-  right: 10vw;
-
-}
-
-#section2 .center .img2 .img2-6 img {
-  width: 25vw;
-  height: 20%;
-
-}
-
-#section2 .center .img2 .img2-6 p {
-  position: absolute;
-  right: 15%;
-  bottom: 0;
-  letter-spacing: normal;
-  font-size: 1vw;
-
-}
 
 #section2 .center .img2 .img2-6 a {
   display: inline-block;
@@ -322,18 +400,4 @@ body::-webkit-scrollbar {
   right: -40px;
   bottom: -30px;
 
-}
-
-
-#section2 .center .img2 .img2-7 {
-  object-fit: cover;
-  position: absolute;
-  top: 500vh;
-  left: 4vw;
-  rotate: 24deg;
-}
-
-#section2 .center .img2 .img2-7 img {
-  width: 23vw;
-  height: 20%;
 }
