@@ -15,10 +15,33 @@
 }
 
 @font-face {
-  font-family: "NeoGeoTrial";
-  src: url("../font/NeoGeoTrial-ExtraBold.woff2") format("woff2");
+  font-family: "BaikalTrial";
+  src: url("../font/BaikalTrial-Light.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+}
+
+.quote {
+  --weight: 10;
+  font-family: "Marvin Visions Variable";
+  font-size: 1rem;
+  font-weight: 100;
+  background-size: contain;
+  line-height: 0.8;
+  margin: 0;
+  text-align: center;
+  white-space: pre-line;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.quote>* {
+  color: hwb(0 100% 0%);
+  font-variation-settings: "wght" var(--weight);
+}
+
+.grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 body {
@@ -32,7 +55,7 @@ body {
 #wrap {}
 
 #section1 {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -52,13 +75,16 @@ body {
 #header .logo {}
 
 #header .logo h1 {
-  font-size: 30px;
-  font-weight: 800;
+  font-size: 2rem;
 }
 
 #header .logo span {
-  font-size: 24px;
-  letter-spacing: 10px;
+  font-size: 2rem;
+  letter-spacing: 6.5px;
+}
+
+.nav h1 {
+  font-size: 2rem;
 }
 
 .center {
@@ -82,6 +108,7 @@ body {
   margin: 5px;
   z-index: 10;
   opacity: 0;
+
 }
 
 .center .daewon {
@@ -99,21 +126,230 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   text-transform: uppercase;
-  font-size: 3vw;
+  font-size: 5vw;
+
 }
 
 .center .img1 {
   background-image: url(/assets/img/daewon.jpg);
   background-size: cover;
-  width: 0vw;
-  height: 0vw;
+  width: 30vw;
+  height: 30vw;
   border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
   background-repeat: no-repeat;
-  mix-blend-mode: difference;
+
 }
 
 #section2 {
-  width: 100vw;
-  height: 500vh;
+  width: 100%;
+  height: 560vh;
   background-color: #000;
+  position: relative;
+}
+
+.text2 {
+  padding-top: 30vh;
+}
+
+.text2-1,
+.text2-2,
+.text2-3,
+.text2-4,
+.text2-5 {
+  height: 100vh;
+}
+
+.text2-1 h1,
+.text2-2 h1,
+.text2-3 h1,
+.text2-4 h1,
+.text2-5 h1 {
+  font-size: 10vw;
+  font-weight: 800;
+  mix-blend-mode: difference;
+}
+
+#section2 .img2 .img2-1 {
+  object-fit: cover;
+  top: 10vh;
+  left: 10vw;
+  position: absolute;
+  rotate: -15deg;
+}
+
+#section2 .img2 .img2-2 {
+  object-fit: cover;
+  top: 36vh;
+  right: 7vw;
+  position: absolute;
+  rotate: 18deg;
+}
+
+#section2 .img2 .img2-3 {
+  object-fit: cover;
+  position: absolute;
+  top: 137vh;
+  left: 18vw;
+}
+
+#section2 .img2 .img2-4 {
+  object-fit: cover;
+  position: absolute;
+  top: 233vh;
+  right: 17vw;
+  rotate: -15deg;
+}
+
+#section2 .img2 .img2-5 {
+  object-fit: cover;
+  position: absolute;
+  top: 320vh;
+  left: 22vw;
+}
+
+#section2 .img2 .img2-6 {
+  object-fit: cover;
+  position: absolute;
+  top: 427vh;
+  right: 20vw;
+}
+
+#section2 .img2 .img2-7 {
+  object-fit: cover;
+  position: absolute;
+  top: 450vh;
+  left: 10vw;
+  rotate: 24deg;
+}
+
+#section2 .img2 .img2-1 img {
+  width: 20vw;
+  height: 20%;
+}
+
+#section2 .img2 .img2-2 img {
+  width: 30vw;
+  height: 20%;
+}
+
+#section2 .img2 .img2-3 img {
+  width: 25vw;
+  height: 20%;
+}
+
+#section2 .img2 .img2-4 img {
+  width: 25vw;
+  height: 20%;
+}
+
+#section2 .img2 .img2-5 img {
+  width: 20vw;
+  height: 20%;
+  position: relative;
+}
+
+#section2 .img2 .img2-6 img {
+  width: 25vw;
+  height: 20%;
+}
+
+#section2 .img2 .img2-7 img {
+  width: 23vw;
+  height: 20%;
+}
+
+#section2 .img2 .img2-2 p {
+  position: absolute;
+  font-size: 1vw;
+  right: 14%;
+  bottom: 0;
+  letter-spacing: normal;
+}
+
+#section2 .img2 .img2-3 p {
+  position: absolute;
+  left: 18%;
+  bottom: 0;
+  font-size: 1vw;
+  letter-spacing: normal;
+}
+
+#section2 .img2 .img2-4 p {
+  position: absolute;
+  right: 12%;
+  bottom: 0;
+  font-size: 1vw;
+  letter-spacing: normal;
+}
+
+#section2 .img2 .img2-5 p {
+  position: absolute;
+  font-size: 1vw;
+  right: 8%;
+  bottom: 0;
+  letter-spacing: normal;
+}
+
+#section2 .img2 .img2-6 p {
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  letter-spacing: normal;
+  font-size: 1vw;
+}
+
+#section2 .img2 .img2-2 a {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  right: -40px;
+  bottom: -30px;
+}
+
+#section2 .img2 .img2-3 a {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: -40px;
+  bottom: -30px;
+}
+
+#section2 .img2 .img2-4 a {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  right: -40px;
+  bottom: -30px;
+}
+
+#section2 .img2 .img2-5 a {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: -40px;
+  bottom: -30px;
+}
+
+#section2 .img2 .img2-6 a {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  right: -40px;
+  bottom: -30px;
 }

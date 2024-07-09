@@ -30,7 +30,48 @@
       <div class="protfolio">protfolio</div>
     </div>
   </div>
-  <div id="section2"></div>
+  <div id="section2">
+    <div class="img2">
+      <div class="img2-1">
+        <img src="/assets/img/section2-1.jpg" alt="#">
+      </div>
+      <div class="img2-2">
+        <img src="/assets/img/section2-2.jpg" alt="#">
+      </div>
+      <div class="img2-3">
+        <img src="/assets/img/section2-3.jpg" alt="#">
+      </div>
+      <div class="img2-4">
+        <img src="/assets/img/section2-4.jpg" alt="#">
+      </div>
+      <div class="img2-5">
+        <img src="/assets/img/section2-5.jpg" alt="#">
+      </div>
+      <div class="img2-6">
+        <img src="/assets/img/section2-6.jpg" alt="#">
+      </div>
+      <div class="img2-7">
+        <img src="/assets/img/section2-7.jpg" alt="#">
+      </div>
+    </div>
+    <div class="text2">
+      <div class="text2-1">
+        <h1 class="quote">html/css</h1>
+      </div>
+      <div class="text2-2">
+        <h1 class="quote">javascript</h1>
+      </div>
+      <div class="text2-3">
+        <h1 class="quote">react.js</h1>
+      </div>
+      <div class="text2-4">
+        <h1 class="quote">next.js</h1>
+      </div>
+      <div class="text2-5">
+        <h1 class="quote">node.js</h1>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -54,17 +95,17 @@
   const ani1 = gsap.timeline();
 
   ani1
-    .to("#section1 .img1", { width: "20vw", height: "20vw", duration: 3, })
+    .to("#section1 .img1", { scale: 1, duration: 3, rotation: 360 })
     .to("#section1 .t1", { opacity: 1, duration: 3, xPercent: -250 }, 0.5)
-    .to("#section1 .t2", { opacity: 1, duration: 3, xPercent: -140 })
-    .to("#section1 .t3", { opacity: 1, duration: 3, })
-    .to("#section1 .t4", { opacity: 1, duration: 3, xPercent: 50 })
-    .to("#section1 .t5", { opacity: 1, duration: 3, xPercent: 130 })
+    .to("#section1 .t2", { opacity: 1, duration: 3, xPercent: -140 }, 0.5)
+    .to("#section1 .t3", { opacity: 1, duration: 3, }, 0.5)
+    .to("#section1 .t4", { opacity: 1, duration: 3, xPercent: 50 }, 0.5)
+    .to("#section1 .t5", { opacity: 1, duration: 3, xPercent: 130 }, 0.5)
     .to("#section1 .text", { scale: 0, duration: 3 })
     .to("#section1 .daewon", { rotation: 340, scale: 1, duration: 5 })
     .to("#section1 .daewon", { rotation: 360, scale: 0, duration: 5 }, "a")
     .to("#section1 .img1", { borderRadius: 0, scale: 1.5, duration: 5 }, "a")
-    .to("#section1 .protfolio", { scale: 1.5, duration: 5, y: -200, color: "#ff6745" }, "a")
+    .to("#section1 .protfolio", { scale: 2, duration: 5, y: "-25vh", color: "#741500" }, "a")
 
   ScrollTrigger.create({
     animation: ani1,
@@ -77,6 +118,44 @@
     anticipatePin: 1,
     markers: false,
   });
+
+
+  function splitTextToSpans(element) {
+    const text = element.textContent;
+    const chars = text
+      .split("")
+      .map((char) => `<span>${char}</span>`)
+      .join("");
+    element.innerHTML = chars;
+    return element.querySelectorAll("span");
+  }
+
+  // 각 text2-1, text2-2, text2-3, text2-4, text2-5 클래스 요소의 텍스트를 개별 span으로 나누기
+  document
+    .querySelectorAll(".text2 > div")
+    .forEach((textElement, index) => {
+      const quoteElement = textElement.querySelector(".quote");
+      const words = splitTextToSpans(quoteElement);
+
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: textElement,
+          start: "top 80%",
+          end: "bottom 70%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      gsap.set(quoteElement, { perspective: 400 });
+
+      tl.to(words, {
+        duration: 5,
+        "--weight": "900",
+        ease: "none",
+
+      });
+    });
 </script>
 
 </html>
