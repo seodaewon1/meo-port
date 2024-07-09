@@ -1,6 +1,7 @@
 @import url("https://websfont.github.io/websfont/websfont.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url(/assets/font/NeoGeo\ Trial\ WOFF2/);
+
 @font-face {
   font-family: "Marvin Visions Variable";
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/MarvinVisionsTrial-Variable.ttf");
@@ -8,11 +9,11 @@
 
 @font-face {
   font-family: "GmarketSansMedium";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
-    format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "NeoGeoTrial";
   src: url("../font/NeoGeoTrial-ExtraBold.woff2") format("woff2");
@@ -28,16 +29,15 @@ body {
   box-sizing: border-box;
 }
 
-#wrap {
-  width: 100%;
-}
+#wrap {}
 
 #section1 {
   width: 100vw;
   height: 100vh;
 }
+
 #header {
-  /* font-family: "Poppins"; */
+  font-family: "Poppins";
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -48,12 +48,14 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
-#header .logo {
-}
+
+#header .logo {}
+
 #header .logo h1 {
   font-size: 30px;
   font-weight: 800;
 }
+
 #header .logo span {
   font-size: 24px;
   letter-spacing: 10px;
@@ -61,35 +63,55 @@ body {
 
 .center {
   font-family: "Poppins";
-  font-size: 11vw;
+  font-size: 15vw;
   font-weight: 800;
   color: #fff;
-  letter-spacing: -15px;
 }
 
-.center > div {
+.center>div {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-transform: uppercase;
 }
-.center .super {
+
+.center .text {
+  line-height: 1;
+  color: #ffffff;
+  margin: 5px;
+  z-index: 10;
+  opacity: 0;
 }
+
 .center .daewon {
-  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0) rotate(15deg);
+  text-transform: uppercase;
+  mix-blend-mode: difference;
 }
+
 .center .protfolio {
-  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  text-transform: uppercase;
+  font-size: 3vw;
 }
+
 .center .img1 {
   background-image: url(/assets/img/daewon.jpg);
   background-size: cover;
-  width: 30vw;
-  height: 30vw;
+  width: 0vw;
+  height: 0vw;
   border-radius: 50%;
   background-repeat: no-repeat;
+  mix-blend-mode: difference;
 }
+
 #section2 {
   width: 100vw;
   height: 500vh;
