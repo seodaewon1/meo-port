@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="assets/css/style2.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="section1">
+        <div id="header">
+          <div class="logo">
+            <h1>FRONT+BACK</h1>
+            <span>PORTFOLIO</span>
+          </div>
+          <div class="nav"><h1>MENU</h1></div>
+        </div>
+        <div class="center">
+          <div class="img1"></div>
+          <div class="super">super</div>
+          <div class="daewon">daewon</div>
+          <div class="protfolio">protfolio</div>
+        </div>
+      </div>
+      <div id="section2"></div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
+  <script>
+    const lenis = new Lenis();
+
+    lenis.on("scroll", (e) => {
+      console.log(e);
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  </script>
+</html>

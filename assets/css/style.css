@@ -2,13 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @font-face {
-  font-family: 'Marvin Visions Variable';
+  font-family: "Marvin Visions Variable";
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/MarvinVisionsTrial-Variable.ttf");
 }
 
 @font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -21,7 +22,7 @@ body {
 }
 
 body:after {
-  content: '';
+  /* content: '';
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/texture.svg);
   position: fixed;
   width: 100%;
@@ -34,12 +35,12 @@ body:after {
   pointer-events: none;
   opacity: 0.2;
   filter: invert(1);
-  background-size: cover;
+  background-size: cover; */
 }
 
 .quote {
   --weight: 10;
-  font-family: 'Marvin Visions Variable';
+  font-family: "Marvin Visions Variable";
   font-size: 6.5rem;
   font-weight: 170;
   background-size: contain;
@@ -50,15 +51,14 @@ body:after {
   letter-spacing: 10px;
 }
 
-.quote>* {
+.quote > * {
   color: hwb(0 100% 0%);
-  font-variation-settings: 'wght' var(--weight);
+  font-variation-settings: "wght" var(--weight);
 }
 
 .grid {
   grid-template-columns: repeat(3, 1fr);
 }
-
 
 body {
   font-family: "gmarket";
@@ -92,7 +92,8 @@ body::-webkit-scrollbar {
   box-sizing: border-box;
 }
 
-.logo {}
+.logo {
+}
 
 .logo h1 {
   font-size: 30px;
@@ -124,14 +125,14 @@ body::-webkit-scrollbar {
   text-transform: uppercase;
 }
 
-#section1 .center>div {
+#section1 .center > div {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
 }
 
-#section1 .center>div.img {
+#section1 .center > div.img {
   background-image: url(../img/daewon.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -141,20 +142,19 @@ body::-webkit-scrollbar {
   transform: translate(-50%, -50%) scale(0);
 }
 
-#section1 .center>div.text1 {
+#section1 .center > div.text1 {
   mix-blend-mode: difference;
   transform: translate(-50%, -50%) scale(1);
 }
 
-#section1 .center>div.text2 {
+#section1 .center > div.text2 {
   transform: translate(-50%, -50%) scale(0);
 }
 
-#section1 .center>div.text3 {
+#section1 .center > div.text3 {
   color: #000;
   z-index: 0;
   transform: translate(-50%, -50%) scale(0);
-
 }
 
 #section1 .img2024 {
@@ -195,7 +195,6 @@ body::-webkit-scrollbar {
 .text2-5 {
   height: 100vh;
 }
-
 
 .text2-1 h1,
 .text2-2 h1,
@@ -291,7 +290,6 @@ body::-webkit-scrollbar {
 #section2 .center .img2 .img2-6 img {
   width: 25vw;
   height: 20%;
-
 }
 
 #section2 .center .img2 .img2-7 img {
@@ -306,7 +304,6 @@ body::-webkit-scrollbar {
   bottom: 0;
   letter-spacing: normal;
 }
-
 
 #section2 .center .img2 .img2-3 p {
   position: absolute;
@@ -338,7 +335,6 @@ body::-webkit-scrollbar {
   bottom: 0;
   letter-spacing: normal;
   font-size: 1vw;
-
 }
 
 #section2 .center .img2 .img2-2 a {
@@ -363,8 +359,6 @@ body::-webkit-scrollbar {
   bottom: -30px;
 }
 
-
-
 #section2 .center .img2 .img2-4 a {
   display: inline-block;
   width: 90px;
@@ -375,8 +369,6 @@ body::-webkit-scrollbar {
   right: -40px;
   bottom: -30px;
 }
-
-
 
 #section2 .center .img2 .img2-5 a {
   display: inline-block;
@@ -389,7 +381,6 @@ body::-webkit-scrollbar {
   bottom: -30px;
 }
 
-
 #section2 .center .img2 .img2-6 a {
   display: inline-block;
   width: 90px;
@@ -399,5 +390,4 @@ body::-webkit-scrollbar {
   position: absolute;
   right: -40px;
   bottom: -30px;
-
 }
