@@ -44,10 +44,8 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-* {}
-
 body {
-  font-family: "NeoGeoTrial";
+  font-family: "gmarket";
   background-color: #f04822;
   margin: 0;
   padding: 0;

@@ -126,18 +126,18 @@
 
   ani1
     .to("#section1 .img1", { scale: 1, duration: 3, rotation: 360 })
-    .to("#section1 .t1", { opacity: 1, duration: 3, xPercent: -250 }, 0.5)
+    .to("#section1 .t1", { opacity: 1, duration: 3, xPercent: -210 }, 0.5)
     .to("#section1 .t2", { opacity: 1, duration: 3, xPercent: -140 }, 0.5)
     .to("#section1 .t3", { opacity: 1, duration: 3 }, 0.5)
     .to("#section1 .t4", { opacity: 1, duration: 3, xPercent: 50 }, 0.5)
-    .to("#section1 .t5", { opacity: 1, duration: 3, xPercent: 170 }, 0.5)
+    .to("#section1 .t5", { opacity: 1, duration: 3, xPercent: 120 }, 0.5)
     .to("#section1 .text", { scale: 0, duration: 3 })
     .to("#section1 .daewon", { rotation: 340, scale: 1, duration: 5 })
     .to("#section1 .daewon", { rotation: 360, scale: 0, duration: 5 }, "a")
     .to("#section1 .img1", { borderRadius: 0, scale: 1.5, duration: 5 }, "a")
     .to(
       "#section1 .protfolio",
-      { scale: 2, duration: 5, y: "-25vh", color: "#fff" },
+      { scale: 2, duration: 5, yPercent: -200, color: "#fff" },
       "a"
     );
 
@@ -197,7 +197,7 @@
       tl.to("#section2 .img2-4", { x: "4vw", y: "4vw", duration: 2 }, 0);
       // tl.to("#section2 .img2-9", { x: -50, y: -"4vw", duration: 5 }, 0.3);
     } else if (index === 3) {
-      tl.to("#section2 .img2-5", { x: "-5vw", y: "4vw", duration: 2 }, 0);
+      tl.to("#section2 .img2-5", { x: "-5vw", y: "-4vw", duration: 2 }, 0);
     } else if (index === 4) {
       tl.to("#section2 .img2-6", { x: "4vw", y: "5vw", duration: 2 }, 0);
       tl.to("#section2 .slide__bar p", { x: "-40vw", duration: 10 });
