@@ -122,15 +122,20 @@
 
   requestAnimationFrame(raf);
 
+  gsap.set("#section1 .t1", { opacity: 0, x: 0 });
+  gsap.set("#section1 .t2", { opacity: 0, x: 0 });
+  gsap.set("#section1 .t3", { opacity: 0 });
+  gsap.set("#section1 .t4", { opacity: 0, x: 0 });
+  gsap.set("#section1 .t5", { opacity: 0, x: 0 });
   const ani1 = gsap.timeline();
 
   ani1
     .to("#section1 .img1", { scale: 1, duration: 3, rotation: 360 })
-    .to("#section1 .t1", { opacity: 1, duration: 3, xPercent: -210 }, 0.5)
-    .to("#section1 .t2", { opacity: 1, duration: 3, xPercent: -140 }, 0.5)
+    .to("#section1 .t1", { opacity: 1, duration: 3, x: "-28vw" }, 0.5)
+    .to("#section1 .t2", { opacity: 1, duration: 3, x: "-12vw" }, 0.5)
     .to("#section1 .t3", { opacity: 1, duration: 3 }, 0.5)
-    .to("#section1 .t4", { opacity: 1, duration: 3, xPercent: 50 }, 0.5)
-    .to("#section1 .t5", { opacity: 1, duration: 3, xPercent: 120 }, 0.5)
+    .to("#section1 .t4", { opacity: 1, duration: 3, x: "10vw" }, 0.5)
+    .to("#section1 .t5", { opacity: 1, duration: 3, x: "22vw" }, 0.5)
     .to("#section1 .text", { scale: 0, duration: 3 })
     .to("#section1 .daewon", { rotation: 340, scale: 1, duration: 5 })
     .to("#section1 .daewon", { rotation: 360, scale: 0, duration: 5 }, "a")
