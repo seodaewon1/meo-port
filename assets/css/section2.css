@@ -249,7 +249,6 @@
 }
 
 .slide__bar {
-  margin-top: 200px;
   width: 3000px;
   height: 20vh;
   transform: rotate(-20deg) scale(1.1);

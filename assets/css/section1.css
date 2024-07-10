@@ -9,8 +9,7 @@
 
 @font-face {
   font-family: "GmarketSansBold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
-    format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -36,7 +35,7 @@
   text-transform: uppercase;
 }
 
-.quote > * {
+.quote>* {
   color: hwb(0 100% 0%);
   font-variation-settings: "wght" var(--weight);
 }
@@ -44,8 +43,9 @@
 .grid {
   grid-template-columns: repeat(3, 1fr);
 }
-* {
-}
+
+* {}
+
 body {
   font-family: "NeoGeoTrial";
   background-color: #f04822;
@@ -54,8 +54,7 @@ body {
   box-sizing: border-box;
 }
 
-#wrap {
-}
+#wrap {}
 
 #section1 {
   width: 100%;
@@ -75,8 +74,7 @@ body {
   box-sizing: border-box;
 }
 
-#header .logo {
-}
+#header .logo {}
 
 #header .logo h1 {
   font-size: 2rem;
@@ -98,7 +96,7 @@ body {
   color: #fff;
 }
 
-.center > div {
+.center>div {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -134,7 +132,7 @@ body {
 }
 
 .center .img1 {
-  background-image: url(/assets/img/daewon.jpg);
+  background-image: url(../img/daewon.jpg);
   background-size: cover;
   width: 30vw;
   height: 30vw;
