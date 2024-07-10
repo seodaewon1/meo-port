@@ -8,7 +8,8 @@
 
 @font-face {
   font-family: "GmarketSansMedium";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -50,7 +51,7 @@ body:after {
   letter-spacing: 10px;
 }
 
-.quote>* {
+.quote > * {
   color: hwb(0 100% 0%);
   font-variation-settings: "wght" var(--weight);
 }
@@ -91,7 +92,8 @@ body::-webkit-scrollbar {
   box-sizing: border-box;
 }
 
-.logo {}
+.logo {
+}
 
 .logo h1 {
   font-size: 1vw;
@@ -122,14 +124,14 @@ body::-webkit-scrollbar {
   text-transform: uppercase;
 }
 
-#section1 .center>div {
+#section1 .center > div {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
 }
 
-#section1 .center>div.img {
+#section1 .center > div.img {
   background-image: url(../img/daewon.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -139,16 +141,16 @@ body::-webkit-scrollbar {
   transform: translate(-50%, -50%) scale(0);
 }
 
-#section1 .center>div.text1 {
+#section1 .center > div.text1 {
   mix-blend-mode: difference;
   transform: translate(-50%, -50%) scale(1);
 }
 
-#section1 .center>div.text2 {
+#section1 .center > div.text2 {
   transform: translate(-50%, -50%) scale(0);
 }
 
-#section1 .center>div.text3 {
+#section1 .center > div.text3 {
   color: #000;
   z-index: 0;
   transform: translate(-50%, -50%) scale(0);
