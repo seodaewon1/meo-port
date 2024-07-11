@@ -1,5 +1,6 @@
 @import url("//fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @font-face {
   font-family: "Iropke";
   src: url("../font/IropkeBatangM.woff");
@@ -25,12 +26,14 @@
   position: relative;
   overflow: visible;
 }
+
 .left__box {
   width: 40vw;
   height: auto;
   background-color: #990303;
   padding: 2vw 1.5vw;
 }
+
 .left__title {
   font-size: 15vw;
   word-wrap: break-word;
@@ -44,11 +47,13 @@
   color: #fff;
   font-weight: lighter;
 }
+
 .left__svg {
   display: flex;
   position: relative;
   margin-top: 167px;
 }
+
 .left__svg1 {
   width: 5vw;
   height: 5vw;
@@ -56,6 +61,7 @@
   border-radius: 50%;
   mix-blend-mode: difference;
 }
+
 .left__svg2 {
   width: 5vw;
   height: 5vw;
@@ -73,9 +79,11 @@
   background-color: #0b0088;
   position: relative;
 }
+
 .right__svg {
   display: flex;
 }
+
 .right__svg1 {
   width: 5vw;
   height: 5vw;
@@ -85,6 +93,7 @@
   border-radius: 50%;
   mix-blend-mode: difference;
 }
+
 .right__svg2 {
   width: 5vw;
   height: 5vw;
@@ -94,14 +103,16 @@
   position: absolute;
   mix-blend-mode: difference;
 }
+
 .right__title {
   font-family: "Poppins";
   font-size: 30vw;
   font-weight: 800;
   color: #e52900;
   text-align: center;
-  line-height: 30vw;
+  line-height: 23vw;
 }
+
 .right__text {
   border-top: 0.3vw solid #e52900;
   font-family: "Iropke";
@@ -109,4 +120,27 @@
   color: #e52900;
   margin: 1vw;
   padding-top: 1vw;
+}
+
+.right__link {
+  margin-top: 15vh;
+}
+
+.right__codeview {
+  font-family: "gmarkets";
+  font-size: 1.5vw;
+  color: #e52900;
+  text-transform: uppercase;
+  width: 30%;
+  text-align: right;
+  margin-bottom: 2vh;
+}
+
+.right__siteview {
+  font-family: "gmarkets";
+  font-size: 1.5vw;
+  color: #e52900;
+  text-transform: uppercase;
+  width: 70%;
+  text-align: right;
 }
