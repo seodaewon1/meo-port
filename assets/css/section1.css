@@ -9,7 +9,8 @@
 
 @font-face {
   font-family: "GmarketSansBold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -35,7 +36,7 @@
   text-transform: uppercase;
 }
 
-.quote>* {
+.quote > * {
   color: hwb(0 100% 0%);
   font-variation-settings: "wght" var(--weight);
 }
@@ -52,11 +53,14 @@ body {
   box-sizing: border-box;
 }
 
-#wrap {}
+#wrap {
+}
 
 #section1 {
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* 또는 필요한 높이 */
+  overflow-x: hidden; /* 가로 스크롤 숨기기 */
+  position: relative; /* 절대 위치 요소의 기준이 될 수 있도록 */
 }
 
 #header {
@@ -72,19 +76,20 @@ body {
   box-sizing: border-box;
 }
 
-#header .logo {}
+#header .logo {
+}
 
 #header .logo h1 {
-  font-size: 2vw;
+  font-size: 1vw;
 }
 
 #header .logo span {
-  font-size: 2vw;
-  letter-spacing: 0.4vw;
+  font-size: 1vw;
+  letter-spacing: 0.2vw;
 }
 
 .nav h1 {
-  font-size: 2vw;
+  font-size: 1vw;
 }
 
 .center {
@@ -94,7 +99,7 @@ body {
   color: #fff;
 }
 
-.center>div {
+.center > div {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,6 +120,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0) rotate(15deg);
+
   text-transform: uppercase;
   mix-blend-mode: difference;
 }
@@ -130,6 +136,7 @@ body {
 }
 
 .center .img1 {
+  display: block;
   background-image: url(../img/daewon.jpg);
   background-size: cover;
   width: 30vw;
