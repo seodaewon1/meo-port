@@ -1,6 +1,6 @@
 @import url("https://websfont.github.io/websfont/websfont.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url(/assets/font/NeoGeo\ Trial\ WOFF2/);
+@import url("/assets/font/NeoGeo\ Trial\ WOFF2/");
 
 @font-face {
   font-family: "Marvin Visions Variable";
@@ -59,7 +59,6 @@ body {
 #section1 {
   width: 100%;
   height: 100vh; /* 또는 필요한 높이 */
-  overflow-x: hidden; /* 가로 스크롤 숨기기 */
   position: relative; /* 절대 위치 요소의 기준이 될 수 있도록 */
 }
 
@@ -120,7 +119,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0) rotate(15deg);
-
   text-transform: uppercase;
   mix-blend-mode: difference;
 }

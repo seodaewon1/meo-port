@@ -95,12 +95,56 @@
         </div>
       </div>
       <div class="slide__bar">
+        <div class="circel">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 500 500"
+          >
+            <defs>
+              <path
+                d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                id="textcircle_bottom"
+              ></path>
+            </defs>
+            <text dy="20" textLength="1220">
+              <textPath xlink:href="#textcircle_bottom">
+                PORTFOLIO - FRONT - END -
+              </textPath>
+            </text>
+          </svg>
+        </div>
         <span>
           <p>PORTFOLIO 2024 PORTFOLIO 2024 PORTFOLIO 2024</p>
         </span>
       </div>
     </div>
-    <div id="section3"></div>
+    <div id="section3">
+      <div class="box__contatiner">
+        <div class="left__box">
+          <div class="left__title">REACT-</div>
+          <div class="left__text">WEAR</div>
+          <div class="left__svg">
+            <div class="left__svg1"></div>
+            <div class="left__svg2"></div>
+          </div>
+        </div>
+        <div class="right__box">
+          <div class="right__svg">
+            <div class="right__svg1"></div>
+            <div class="right__svg2"></div>
+          </div>
+          <div class="right__title">01</div>
+          <div class="right__text">
+            REACT와 YOUTUBE API를 이용하여 사용자들에 맞춤형 옷 추천을
+            제공해주는 웹 사이트입니다. REACT와 YOUTUBE API를 이용하여
+            사용자들에 맞춤형 옷 추천을 제공해주는 웹 사이트입니다.
+          </div>
+          <div class="right__codeview"></div>
+          <div class="right__siteview"></div>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -204,7 +248,12 @@
         tl.to("#section2 .img2-5", { x: "-5vw", y: "-4vw", duration: 2 }, 0);
       } else if (index === 4) {
         tl.to("#section2 .img2-6", { x: "4vw", y: "5vw", duration: 2 }, 0);
-        tl.to("#section2 .slide__bar p", { x: "-10vw", duration: 10 }, 0.3);
+        tl.to("#section2 .slide__bar p", { x: "-30vw", duration: 10 }, 0.3);
+        tl.to(
+          "#section2 .slide__bar .circel",
+          { x: "-30vw", rotation: -360, duration: 10 },
+          0.3
+        );
       }
     });
   </script>

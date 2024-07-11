@@ -1,5 +1,112 @@
+@import url("//fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "Iropke";
+  src: url("../font/IropkeBatangM.woff");
+}
+
 #section3 {
-    width: 100%;
-    height: 500vh;
-    background-color: #000;
+  max-width: 100%;
+  height: 500vh;
+  background-color: #000;
+}
+
+.box__contatiner {
+  width: 88vw;
+  z-index: 0;
+  background-color: #000;
+  align-items: stretch;
+  max-width: none;
+  height: auto;
+  padding: 0 5vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: visible;
+}
+.left__box {
+  width: 40vw;
+  height: auto;
+  background-color: #990303;
+  padding: 2vw 1.5vw;
+}
+.left__title {
+  font-size: 15vw;
+  word-wrap: break-word;
+  color: #fff;
+  font-weight: bold;
+}
+
+.left__text {
+  font-size: 11vw;
+  word-wrap: break-word;
+  color: #fff;
+  font-weight: lighter;
+}
+.left__svg {
+  display: flex;
+  position: relative;
+  margin-top: 167px;
+}
+.left__svg1 {
+  width: 5vw;
+  height: 5vw;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+}
+.left__svg2 {
+  width: 5vw;
+  height: 5vw;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 4vw;
+  mix-blend-mode: difference;
+}
+
+.right__box {
+  width: 40vw;
+  height: auto;
+  padding: 2vw;
+  background-color: #0b0088;
+  position: relative;
+}
+.right__svg {
+  display: flex;
+}
+.right__svg1 {
+  width: 5vw;
+  height: 5vw;
+  margin-top: 2vw;
+  z-index: 10;
+  background-color: #08ffb5;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+}
+.right__svg2 {
+  width: 5vw;
+  height: 5vw;
+  left: 4vw;
+  background-color: #08ffb5;
+  border-radius: 50%;
+  position: absolute;
+  mix-blend-mode: difference;
+}
+.right__title {
+  font-family: "Poppins";
+  font-size: 30vw;
+  font-weight: 800;
+  color: #e52900;
+  text-align: center;
+  line-height: 30vw;
+}
+.right__text {
+  border-top: 0.3vw solid #e52900;
+  font-family: "Iropke";
+  font-size: 1.55vw;
+  color: #e52900;
+  margin: 1vw;
+  padding-top: 1vw;
 }
