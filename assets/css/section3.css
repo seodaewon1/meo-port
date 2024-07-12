@@ -8,7 +8,7 @@
 
 #section3 {
   max-width: 100%;
-  height: 850vh;
+  height: 958vh;
   background-color: #000;
 }
 
@@ -27,13 +27,30 @@
   margin-bottom: 2vh;
   flex-wrap: wrap;
 }
-
+.box__contatiner.c1 {
+  width: 88vw;
+  z-index: 0;
+  align-items: stretch;
+  max-width: none;
+  height: auto;
+  padding: 0 5vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  overflow: visible;
+  margin-bottom: 2vh;
+  flex-wrap: wrap;
+}
 .left__box {
   width: 40vw;
   height: auto;
   background-color: #990303;
   padding: 2vw 1.5vw;
   margin-bottom: 2vw;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .left__title {
@@ -154,7 +171,7 @@
 .left__box.l1,
 .left__box.l2,
 .left__box.l4 {
-  background-color: #000;
+  background-color: transparent;
 }
 /* right r1 */
 .right__box.r1 {
@@ -257,4 +274,58 @@
 }
 .right__box.r5 .right__siteview a {
   color: #ff7a00;
+}
+
+.slide__bar.s1 {
+  width: 120vw;
+  height: 21vh;
+  transform: rotate(20deg);
+  background-color: #fe4006;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: -10vw;
+  margin-top: 45vh;
+}
+
+.slide__bar.s1 span {
+  width: 100%;
+  height: 15vh;
+  background-color: #ff0000;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  letter-spacing: -7px;
+}
+
+.slide__bar.s1 p {
+  width: 100%;
+  white-space: nowrap;
+  font-size: 6vw;
+  color: #fff;
+  font-family: "gmarket";
+  font-weight: bold;
+  text-align: center;
+}
+.circel {
+  position: absolute;
+  background-color: #03ff00;
+  border-radius: 50%;
+  width: 10vw;
+  right: 15%;
+  top: -83%;
+  background-image: url(../img/Arrow\ 1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30%;
+}
+svg {
+  text {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 21px;
+    fill: #000000;
+  }
 }
