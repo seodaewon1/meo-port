@@ -27,6 +27,7 @@
   margin-bottom: 2vh;
   flex-wrap: wrap;
 }
+
 .box__contatiner.c1 {
   width: 88vw;
   z-index: 0;
@@ -42,6 +43,7 @@
   margin-bottom: 2vh;
   flex-wrap: wrap;
 }
+
 .left__box {
   width: 40vw;
   height: auto;
@@ -93,7 +95,7 @@
 
 .right__box {
   width: 40vw;
-  height: 125vh;
+  height: auto;
   padding: 2vw 1.5vw;
   background-color: #0b0088;
   color: #e52900;
@@ -144,11 +146,13 @@
 .right__link {
   margin-top: 20vh;
 }
+
 .right__codeview {
   width: 30%;
   text-align: right;
   margin-bottom: 2vh;
 }
+
 .right__codeview a {
   font-family: "gmarkets";
   font-size: 1.5vw;
@@ -156,10 +160,12 @@
   color: #e52900;
   text-decoration: none;
 }
+
 .right__siteview {
   width: 70%;
   text-align: right;
 }
+
 .right__siteview a {
   font-family: "gmarkets";
   font-size: 1.5vw;
@@ -167,51 +173,60 @@
   color: #e52900;
   text-decoration: none;
 }
+
 /* left l1 */
 .left__box.l1,
 .left__box.l2,
 .left__box.l4 {
   background-color: transparent;
 }
+
 /* right r1 */
 .right__box.r1 {
   background-color: #0075ff;
   color: #0b0088;
 }
-.right__box.r1 .right__svg1 {
-}
-.right__box.r1 .right__svg2 {
-}
+
+.right__box.r1 .right__svg1 {}
+
+.right__box.r1 .right__svg2 {}
+
 .right__box.r1 .right__text {
   border-top: 0.3vw solid #0b0088;
 }
-.right__box.r1 .right__text {
-}
+
+.right__box.r1 .right__text {}
+
 .right__box.r1 .right__codeview a {
   color: #0b0088;
 }
+
 .right__box.r1 .right__siteview a {
   color: #0b0088;
 }
+
 /* right r2 */
 .right__box.r2 {
   background-color: #ff0000;
   color: #fff;
 }
-.right__box.r2 .right__svg1 {
-}
+
+.right__box.r2 .right__svg1 {}
 
 .right__box.r2 .right__text {
   border-top: 0.3vw solid #fff;
 }
-.right__box.r2 .right__text {
-}
+
+.right__box.r2 .right__text {}
+
 .right__box.r2 .right__codeview a {
   color: #fff;
 }
+
 .right__box.r2 .right__siteview a {
   color: #fff;
 }
+
 /* left l3 */
 
 /* right r3 */
@@ -219,20 +234,23 @@
   background-color: #03ff00;
   color: #000;
 }
-.right__box.r3 .right__svg1 {
-}
+
+.right__box.r3 .right__svg1 {}
 
 .right__box.r3 .right__text {
   border-top: 0.3vw solid #000;
 }
-.right__box.r3 .right__text {
-}
+
+.right__box.r3 .right__text {}
+
 .right__box.r3 .right__codeview a {
   color: #000;
 }
+
 .right__box.r3 .right__siteview a {
   color: #000;
 }
+
 /* left l4 */
 
 /* right r4 */
@@ -240,20 +258,23 @@
   background-color: #50008e;
   color: #cc00ff;
 }
-.right__box.r4 .right__svg1 {
-}
+
+.right__box.r4 .right__svg1 {}
 
 .right__box.r4 .right__text {
   border-top: 0.3vw solid #cc00ff;
 }
-.right__box.r4 .right__text {
-}
+
+.right__box.r4 .right__text {}
+
 .right__box.r4 .right__codeview a {
   color: #cc00ff;
 }
+
 .right__box.r4 .right__siteview a {
   color: #cc00ff;
 }
+
 /* left l5 */
 
 /* right r5 */
@@ -261,17 +282,19 @@
   background-color: #ffe500;
   color: #ff7a00;
 }
-.right__box.r5 .right__svg1 {
-}
+
+.right__box.r5 .right__svg1 {}
 
 .right__box.r5 .right__text {
   border-top: 0.3vw solid #ff7a00;
 }
-.right__box.r5 .right__text {
-}
+
+.right__box.r5 .right__text {}
+
 .right__box.r5 .right__codeview a {
   color: #ff7a00;
 }
+
 .right__box.r5 .right__siteview a {
   color: #ff7a00;
 }
@@ -308,6 +331,7 @@
   font-weight: bold;
   text-align: center;
 }
+
 .circel {
   position: absolute;
   background-color: #03ff00;
@@ -320,6 +344,7 @@
   background-position: center;
   background-size: 30%;
 }
+
 svg {
   text {
     font-size: 3.5rem;
