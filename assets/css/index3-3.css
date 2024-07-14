@@ -18,13 +18,29 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
-    position: relative;
     overflow: visible;
     margin-bottom: 2vh;
+    position: relative;
     flex-wrap: wrap;
 }
 
-.left__box {
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 42vw;
+}
+
+.left {
+    position: relative;
+    /* left 요소의 기본 위치를 relative로 설정 */
+}
+
+.right {}
+
+.left__box,
+.left__box2,
+.left__box3 {
     width: 42vw;
     height: 125vh;
     background-color: #990303;
@@ -35,12 +51,12 @@
 }
 
 
-.left__box.l3 {
-    margin-top: 133vh;
+.left__box2 {
+    margin-top: 262vh;
 }
 
-.left__box.l5 {
-    margin-top: 262vh;
+.left__box3 {
+    margin-top: 133vh;
 }
 
 .left__box:first-child {

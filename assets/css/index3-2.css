@@ -1,12 +1,11 @@
-/* section2 */
 #section2 {
     position: relative;
     z-index: 2000;
     width: 100%;
     background-color: #000;
     margin-top: 100vh;
+    overflow: hidden;
 }
-
 
 #section2>div {
     width: 100%;
@@ -16,6 +15,7 @@
     text-align: center;
     font-size: 8vw;
     text-transform: uppercase;
+    position: relative;
 }
 
 #section2>div p {
@@ -23,14 +23,71 @@
     font-size: 14px;
 }
 
-#section2 .t1 {
-    position: relative;
-}
-
 #section2>div h3 {
     line-height: 0.9;
     margin-bottom: 2%;
     overflow: hidden;
+}
+
+#section2 .t1 h3,
+#section2 .t2 h3,
+#section2 .t3 h3,
+#section2 .t4 h3,
+#section2 .t5 h3,
+#section2 .t6 h3 {
+    position: relative;
+}
+
+#section2 .t1:hover::after,
+#section2 .t2:hover::after,
+#section2 .t3:hover::after,
+#section2 .t4:hover::after,
+#section2 .t5:hover::after,
+#section2 .t6:hover::after {
+    opacity: 1;
+}
+
+#section2 .t1::after,
+#section2 .t2::after,
+#section2 .t3::after,
+#section2 .t4::after,
+#section2 .t5::after,
+#section2 .t6::after {
+    content: attr(data-percent);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vw;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+#section2 .t1 {
+    z-index: 1;
+}
+
+#section2 .t2 {
+    z-index: 1;
+}
+
+#section2 .t3 {
+    z-index: 1;
+}
+
+#section2 .t4 {
+    z-index: 1;
+}
+
+#section2 .t5 {
+    z-index: 1;
+}
+
+#section2 .t6 {
+    z-index: 1;
 }
 
 #section2 .t1 .img1 {
