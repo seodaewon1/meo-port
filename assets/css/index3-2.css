@@ -59,7 +59,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 20vw;
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.2);
     z-index: 0;
     pointer-events: none;
     transition: opacity 0.5s;
