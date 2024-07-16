@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
     font-family: "NeoGeoTrial-Bold";
     src: url("../font/NeoGeoTrial-Bold.woff2");
+}@font-face {
+  font-family: "Iropke";
+  src: url("../font/IropkeBatangM.woff");
 }
 
 @font-face {
@@ -20,31 +24,33 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    font-family: "gmarket";
-    padding: 1rem;
+    font-family: "Poppins";
+    padding: 2rem;
     z-index: 10000;
-  }
+}
   
-  #header h1 {
-    color: #fff;
-    font-size: 20px;
+#header h1 {
+    color: #000000;
+    font-size: 30px;
     text-transform: uppercase;
     font-weight: 900;
     line-height: 1.2;
-  }
+}
   
-  #header h1 span {
+#header h1 span {
     display: block;
     font-weight: 500;
     letter-spacing: 8px;
     font-size: 14px;
-  }
+}
   
-  #header nav {
+#header nav {
+    font-size: 16px;
     text-transform: uppercase;
-    font-weight: 900;
-    color: #fff;
-  }
+    font-weight: 500;
+    color: #000000;
+}
+  
 #section1 {
     width: 100%;
     height: 100vh;
@@ -52,142 +58,50 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    z-index: 1;
-  } 
+    background-color: #FFFBF2;
+} 
 
-  #section1 .center {
-    font-size: 15vw;
+#section1 .center {
+    font-size: 12vw;
     text-transform: uppercase;
-    color: #fff;
-    font-weight: 900;
+    color: #212121;
+    font-weight: 500;
     position: relative;
     width: 100%;
-  }
+}
   
-  #section1 .center > div.text1 {
+#section1 .center > div.text1 {
     line-height: 0.9;
-    font-family: "NeoGeoTrial-Bold";
-    overflow: hidden;
-  }
+    font-family: "Poppins";
+    display: flex;
+    position: relative;
+    white-space: nowrap;
+    z-index: 100;
+    padding: 5rem 0;
+} 
   
-  #section1 .center > div.text2 {
+#section1 .center .img {
     position: absolute;
-    left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    line-height: 0.9;
-    font-family: "NeoGeoTrial-Bold";
-    overflow: hidden;
-  }
-  
-  #section1 .center > div.text3 {
-    position: absolute;
     left: 50%;
-    top: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    line-height: 0.9;
-    font-family: "NeoGeoTrial-Bold";
-    overflow: hidden;
-  }
-  
-  #section1 .center > div.text4 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    line-height: 0.9;
-    font-family: "NeoGeoTrial-Bold";
-    overflow: hidden;
-  }
-
-  #section1 .scroll {
-    position: absolute;
-    left: 50%;
-    bottom: 60px;
-    transform: translateX(-50%);
-    z-index: 1000;
-    padding-bottom: 30px;
-    color: #fff;
-    font-family: "gmarket";
-    font-weight: 900;
-    text-transform: uppercase;
-    background-image: url(../img/arrow.svg);
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background-image: url(../img/daewon.jpg);
+    background-size: cover;
+    background-position: top;
     background-repeat: no-repeat;
-    background-position: center 20px;
-    background-size: 20px;
-  }
+    z-index: 50;
+}
 
-  @keyframes move_wave {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1)
-    }
-    50% {
-        transform: translateX(-25%) translateZ(0) scaleY(0.55)
-    }
-    100% {
-        transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
-}
-.waveWrapper {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-    z-index: -1;
-}
-.waveWrapperInner {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background-image: linear-gradient(to top, #f04822 20%, #e0ae8c 80%);
-}
-.bgTop {
-    z-index: 15;
-    opacity: 0.5;
-}
-.bgMiddle {
-    z-index: 10;
-    opacity: 0.75;
-}
-.bgBottom {
-    z-index: 5;
-}
-.wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
-}
-.waveTop {
-    background-size: 50% 100px;
-    z-index: -1;
-}
-.waveAnimation .waveTop {
-  animation: move-wave 3s;
-   -webkit-animation: move-wave 3s;
-   -webkit-animation-delay: 1s;
-   animation-delay: 1s;
-}
-.waveMiddle {
-    background-size: 50% 120px;
-}
-.waveAnimation .waveMiddle {
-    animation: move_wave 10s linear infinite;
-}
-.waveBottom {
-    background-size: 50% 100px;
-}
-.waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
+#section1 .text2{
+  color: 212121;
+  font-family: "gmarket";
+  font-size: 20px;
+  position: relative;
+  max-width: 48.5rem;
+  z-index: 10;
+  margin-left: 65%;
+  padding: 0 20px;
 }

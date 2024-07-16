@@ -1,0 +1,194 @@
+@font-face {
+    font-family: "NeoGeoTrial-Bold";
+    src: url("../font/NeoGeoTrial-Bold.woff2");
+}
+
+@font-face {
+    font-family: "NeoGeoTrial-ExtraLight";
+    src: url("../font/NeoGeoTrial-ExtraLight.woff2");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: "gmarket";
+    padding: 1rem;
+    z-index: 10000;
+  }
+  
+  #header h1 {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+  
+  #header h1 span {
+    display: block;
+    font-weight: 500;
+    letter-spacing: 8px;
+    font-size: 14px;
+  }
+  
+  #header nav {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #fff;
+  }
+#section1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    
+  } 
+
+  #section1 .center {
+    font-size: 15vw;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    position: relative;
+    width: 100%;
+  }
+  
+  #section1 .center > div.text1 {
+    line-height: 0.9;
+    font-family: "NeoGeoTrial-Bold";
+    overflow: hidden;
+  }
+  
+  #section1 .center > div.text2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    line-height: 0.9;
+    font-family: "NeoGeoTrial-Bold";
+    overflow: hidden;
+  }
+  
+  #section1 .center > div.text3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    line-height: 0.9;
+    font-family: "NeoGeoTrial-Bold";
+    overflow: hidden;
+  }
+  
+  #section1 .center > div.text4 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    line-height: 0.9;
+    font-family: "NeoGeoTrial-Bold";
+    overflow: hidden;
+  }
+
+  #section1 .scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding-bottom: 30px;
+    color: #fff;
+    font-family: "gmarket";
+    font-weight: 900;
+    text-transform: uppercase;
+    background-image: url(../img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    background-size: 20px;
+  }
+
+  @keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    z-index: -1;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #f04822 100%, #f04822 80%);
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+    z-index: -1;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
