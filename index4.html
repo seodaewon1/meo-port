@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/index4-1.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+</head>
+<body>
+    <header id="header">
+        <h1>front+back<span>portfolio</span></h1>
+        <nav>menu</nav>
+      </header>
+    <section id="section1">
+        <div class="center">
+          <div class="text1 split">daewon</div>
+          <div class="text2 split">creative</div>
+          <div class="text3 split">developer</div>
+          <div class="text4 split">portfolio</div>
+        </div>
+        <div class="scroll">scroll</div>
+        <div class="scroll-img"></div>
+        <div class="waveWrapper waveAnimation">
+          <div class="waveWrapperInner bgTop">
+            <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+          </div>
+          <div class="waveWrapperInner bgMiddle">
+            <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+          </div>
+          <div class="waveWrapperInner bgBottom">
+            <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+          </div>
+        </div>
+      </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    const targets = gsap.utils.toArray(".split");
+    let SplitClient = new SplitType(targets, { type: "lines, words, chars" });
+    let lines = SplitClient.lines;
+    let words = SplitClient.words;
+    let chars = SplitClient.chars;
+</script>
+<script> 
+     gsap.set("#header", { top: -150 });
+    gsap.set(".scroll", {  opacity: 0});
+    gsap.set(".text1 .char", { opacity: 0, x: 300 });
+    gsap.set(".text2 .char", { opacity: 0, x: -300 });
+    gsap.set(".text3 .char", { opacity: 0, y: -300 });
+    gsap.set(".text4 .char", { opacity: 0, y: 300 });
+
+    const tl = gsap.timeline();
+
+    setTimeout(() => {
+      tl.to(".text1 .char", {opacity: 1, x: 0,duration:1,  stagger: { amount: 1, from: "random"  },  ease: "circ.out", });
+      tl.to(".text1 .char", { y: -300, delay:0.5, stagger: { amount: 1 },ease: "circ.out"})
+      tl.to(".text2 .char", {opacity: 1, x: 0,duration:1, stagger: { amount: 1, from: "random"  },  ease: "circ.out", });
+      tl.to(".text2 .char", { y: 300,duration:1, stagger: { amount: 1 },ease: "circ.out"});
+      tl.to(".text3 .char", {opacity: 1, y: 0,duration:1, stagger: { amount: 1, from: "random" },  ease: "circ.out", });
+      tl.to(".text3 .char", {opacity:0, y: 300,duration:1, stagger: { amount: 1 }, ease: "circ.out"});
+      tl.to(".text4 .char", {opacity: 1, y: 0, stagger: { amount: 1, from: "random"  },  ease: "circ.out", });
+      tl.to(".scroll", { opacity: 1, ease: "circ.out" },"a");
+      tl.to("#header", { top: 0, ease: "circ.out" },"a");
+      tl.eventCallback("onComplete", function () {
+        document.body.style.overflow = "auto";
+      });
+    }, 2000);
+
+</script>
+</html>
