@@ -14,13 +14,13 @@
     <header id="header">
         <div class="left">
             <h1>Portfolio</h1>
-            <ul>
-                <li><a href="#">Introduction</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Site</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
         </div>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Skill</a></li>
+            <li><a href="#">Comment</a></li>
+        </ul>
         <div class="right">
             <div>Date : <span class="date"></span></div>
             <div>Weather : rain</div>
@@ -39,9 +39,9 @@
             안녕하세요 저는 시각적으로 매력적이고 사용자 친화적인 웹사이트를 만드는 데 열정을 갖고 있는 야심찬 프론트엔드 개발자를 꿈꾸고 있습니다. 저는 HTML, CSS, JavaScript에 대한 탄탄한 기초를 갖추고 있으며 React와 같은 최신 프레임워크에서 지속적으로 기술을 확장하고 있습니다.
         </div>
         <div class="text">
-            <div>FRONT</div>
-            <div>END</div>
-            <div>PORT</div>
+            <div class="front">FRONT</div>
+            <div class="end">END</div>
+            <div class="port">PORT</div>
             <div class="img">
                 <img src="./assets/img/daewon.jpg"
                     alt="dd">
@@ -545,14 +545,38 @@
         window.addEventListener('scroll', updateScrollLength);
     </script>
 <script>
-    const tl = gsap.timeline();
     gsap.set("#section1 .desc .char", { opacity: 0, x: 300 });
-    gsap.set("#section1 .text", { opacity: 0, y: 300 });
+    gsap.set("#header",{ top:-150 });
+    const tl = gsap.timeline();
+
     setTimeout(() => {
-      tl.to("#section1 .desc  .char", {opacity: 1,x:0, duration:1, stagger: { amount: 1, from: "random"} ,  ease: "circ.out", });
-      tl.to("#section1 .text", {opacity: 1, y:0 ,  ease: "circ.out", });
+      tl.to("#section1 .desc  .char", {opacity: 1,x:0, duration:2, stagger: { amount: 1, from: "random"} ,  ease: "expo.inOut", })
+      .to("#header", { top: 0, ease: "expo.inOut" })
     }, 1000);
 
+
+    gsap.set("#section1 .img", { opacity: 0, x: -200 });
+    gsap.set("#section1 .front", { opacity: 0, x: 200 });
+    gsap.set("#section1 .end", { opacity: 0, x: 200 });
+    gsap.set("#section1 .port", { opacity: 0, x: 200 });
+
+    const ani3 = gsap.timeline();
+
+    ani3
+
+    .to("#section1 .img", {opacity: 1,duration:5  ,delay:2,  x: 0, ease: "back.inOut",})
+    .to("#section1 .front", {opacity: 1,duration:5  ,delay:2,  x: 0, ease: "back.inOut",})
+    .to("#section1 .end", {opacity: 1,duration:5 ,delay:2,  x:0 ,  ease: "back.inOut", })
+    .to("#section1 .port", { opacity: 1,duration:5  ,delay:2,  x: 0, ease: "back.inOut",})
+
+    ScrollTrigger.create({
+    animation: ani3,
+    trigger: "#section1",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 3,
+    markers: true,
+    });
 </script>
 
 
