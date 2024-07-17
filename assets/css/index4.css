@@ -1,6 +1,9 @@
 @font-face {
     font-family: "NeoGeoTrial-Bold";
     src: url("../font/NeoGeoTrial-Bold.woff2");
+}@font-face {
+  font-family: "cabinet";
+  src: url("../font/cabinet/CabinetGrotesk-Medium.woff2")
 }
 
 @font-face {

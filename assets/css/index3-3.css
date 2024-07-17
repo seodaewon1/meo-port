@@ -154,13 +154,14 @@
 }
 
 .right__link {
-    margin-top: 19vh;
+    display: flex;
+    margin-top: 15vw;
 }
 
 .right__codeview {
-    width: 30%;
-    text-align: right;
-    margin-bottom: 2vh;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 5vw;
 }
 
 .right__codeview a {
@@ -169,12 +170,15 @@
     text-transform: uppercase;
     color: #e52900;
     text-decoration: none;
+    margin-left: -70px;
 }
 
 .right__siteview {
-    width: 70%;
-    text-align: right;
+    width: 50%;
+    text-align: center;
+    margin-top: 5vw;
 }
+
 
 .right__siteview a {
     font-family: "gmarkets";
@@ -182,8 +186,66 @@
     text-transform: uppercase;
     color: #e52900;
     text-decoration: none;
+    margin-left: -70px;
+}.arrow-bottom {
+    display: inline-block;
+    position: relative;
+    border-bottom: 2px solid #e52900;
+    line-height: 0.5;
 }
 
+.arrow-bottom::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: translateY(-40%) rotate(224deg);
+    width: 10px;
+    height: 10px;
+    /* background-color: #333; */
+    border-left: 2px solid #e52900;
+    border-bottom: 2px solid #e52900;
+}
+.arrow-bottom.a2{
+    border-bottom: 2px solid #0b0088;
+    
+}
+.arrow-bottom.a2::after{
+    border-left: 2px solid #0b0088;
+    border-bottom: 2px solid #0b0088;
+}
+.arrow-bottom.a3{
+    border-bottom: 2px solid #fff;
+    
+}
+.arrow-bottom.a3::after{
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+.arrow-bottom.a4{
+    border-bottom: 2px solid #000;
+    
+}
+.arrow-bottom.a4::after{
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+.arrow-bottom.a5{
+    border-bottom: 2px solid #cc00ff;
+    
+}
+.arrow-bottom.a5::after{
+    border-left: 2px solid #cc00ff;
+    border-bottom: 2px solid #cc00ff;
+}
+.arrow-bottom.a6{
+    border-bottom: 2px solid #ff7a00;
+    
+}
+.arrow-bottom.a6::after{
+    border-left: 2px solid #ff7a00;
+    border-bottom: 2px solid #ff7a00;
+}
 /* left l1 */
 
 
