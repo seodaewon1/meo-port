@@ -54,7 +54,7 @@
             경험했습니다.
           </p>
         </div>
-
+    
         <div class="t2" data-percent="70%">
           <h3 class="split">JavaScript</h3>
           <p class="split">
@@ -65,7 +65,7 @@
             친화적인 인터페이스와 고성능 서버를 구축했습니다.
           </p>
         </div>
-
+    
         <div class="t3" data-percent="70%">
           <h3 class="split">React.js</h3>
           <p class="split">
@@ -76,7 +76,7 @@
             복잡한 네비게이션 로직을 구현했습니다.
           </p>
         </div>
-
+    
         <div class="t4" data-percent="60%">
           <h3 class="split">Node.js</h3>
           <p class="split">
@@ -87,7 +87,7 @@
             활용했습니다.
           </p>
         </div>
-
+    
         <div class="t5" data-percent="60%">
           <h3 class="split">Next.js</h3>
           <p class="split">
@@ -99,7 +99,7 @@
             코드 스플리팅을 통해 성능을 최적화했습니다.
           </p>
         </div>
-
+    
         <div class="t6" data-percent="60%">
           <h3 class="split">PHP & MySQL</h3>
           <p class="split">
@@ -367,7 +367,51 @@
       let words = SplitClient.words;
       let chars = SplitClient.chars;
     </script>
-    <script>
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('#section2 > div');
+
+    sections.forEach(section => {
+      const percent = section.getAttribute('data-percent');
+      const percentElement = document.createElement('h3');
+      percentElement.classList.add('percent-overlay');
+      percentElement.innerText = '0%';
+      percentElement.style.position = 'absolute';
+      percentElement.style.top = '50%';
+      percentElement.style.left = '50%';
+      percentElement.style.transform = 'translate(-50%, -50%)';
+      percentElement.style.fontSize = '20vw';
+      percentElement.style.color = 'rgba(255, 255, 255, 0.2)';
+      percentElement.style.zIndex = '0';
+      percentElement.style.pointerEvents = 'none';
+      section.appendChild(percentElement);
+
+      let start = 0;
+      const end = parseInt(percent);
+      const increment = 1;
+      const duration = 2000 / end; // 2 seconds total duration
+
+      const animatePercent = () => {
+        if (start <= end) {
+          percentElement.innerText = start + '%';
+          start += increment;
+          setTimeout(animatePercent, duration);
+        } else {
+          percentElement.innerText = end + '%';
+        }
+      };
+
+      const h3Element = section.querySelector('h3');
+
+h3Element.addEventListener('mouseover', () => {
+  start = 0; // Reset the start value to 0 when mouseover happens
+  percentElement.innerText = '0%'; // Reset the displayed percentage
+  animatePercent(); // Start the animation
+      });
+    });
+  });
+</script>
+<script>
       gsap.set("#header", { top: -150 });
       gsap.set(".scroll", { y: 100 });
       gsap.set(".text1 .char", { opacity: 0, y: 300 });
