@@ -14,13 +14,13 @@
     <header id="header">
         <div class="left">
             <h1>Portfolio</h1>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Skill</a></li>
+                <li><a href="#">Comment</a></li>
+            </ul>
         </div>
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">Skill</a></li>
-            <li><a href="#">Comment</a></li>
-        </ul>
         <div class="right">
             <div>Date : <span class="date"></span></div>
             <div>Weather : rain</div>
@@ -474,23 +474,40 @@
         let chars = SplitClient.chars;
     </script>
     <script>
-    function updateTime() {
-        const now = new Date();
-        const formattedTime = now.toLocaleString();
-        
-        const timeElements = document.querySelectorAll('.date, #currentTime');
-        timeElements.forEach(element => {
-            element.textContent = formattedTime;
-        });
-    }
+     const startTime = new Date();
 
-    document.addEventListener('DOMContentLoaded', () => {
-        updateTime(); // 초기 로드 시 시간 업데이트
-        setInterval(updateTime, 1000); // 1초마다 시간 업데이트
-    });
-
-    // 사이트 접속시간
+// 현재 날짜 업데이트 함수
+function updateCurrentDate() {
+    const now = new Date();
+    const formattedDate = now.toLocaleDateString();
     
+    const dateElements = document.querySelectorAll('.date');
+    dateElements.forEach(element => {
+        element.textContent = formattedDate;
+    });
+}
+
+// 경과 시간 포맷팅 함수
+function formatTime(seconds) {
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    return `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}
+
+// 경과 시간 업데이트 함수
+function updateElapsedTime() {
+    const currentTime = new Date();
+    const elapsedSeconds = Math.floor((currentTime - startTime) / 1000);
+    document.querySelector('.time').textContent = formatTime(elapsedSeconds);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateCurrentDate(); // 초기 로드 시 날짜 업데이트
+    updateElapsedTime(); // 초기 로드 시 경과 시간 업데이트
+    setInterval(updateElapsedTime, 1000); // 1초마다 경과 시간 업데이트
+});
+</script>
     </script>
     
     <script>
@@ -533,41 +550,42 @@
             }
         });
 
-            function updateScrollLength() {
-                const scrollLength = window.scrollY; // 현재 스크롤 위치
-                const rightNimElement = document.querySelector('.rightNum');
-                if (rightNimElement) {
-                    rightNimElement.textContent = scrollLength;
-                }
-            }
+        function updateScrollLength() {
+    const scrollLength = Math.floor(window.scrollY); // 현재 스크롤 위치의 정수 부분
+    const rightNumElement = document.querySelector('.rightNum');
+    if (rightNumElement) {
+        rightNumElement.textContent = scrollLength;
+    }
+}
 
-        // 스크롤 이벤트 리스너 추가
-        window.addEventListener('scroll', updateScrollLength);
+// 스크롤 이벤트 리스너 추가
+window.addEventListener('scroll', updateScrollLength);
+
     </script>
 <script>
-    gsap.set("#section1 .desc .char", { opacity: 0, x: 300 });
-    gsap.set("#header",{ top:-150 });
+    gsap.set("#section1 .desc .char", { opacity: 0, y: -200 });
+    gsap.set("#header",{ top:-200 });
+
     const tl = gsap.timeline();
 
     setTimeout(() => {
-      tl.to("#section1 .desc  .char", {opacity: 1,x:0, duration:2, stagger: { amount: 1, from: "random"} ,  ease: "expo.inOut", })
-      .to("#header", { top: 0, ease: "expo.inOut" })
+      tl.to("#section1 .desc  .char", {opacity: 1,y:0, duration:2, stagger: { amount: 1, from: "random"} ,  ease: "expo.inOut", })
+      .to("#header", { top: 0, ease: "expo.inOut" },"a")
+      .to(".weather", { right: 0, ease: "expo.inOut" },"a")
     }, 1000);
 
 
-    gsap.set("#section1 .img", { opacity: 0, x: -200 });
-    gsap.set("#section1 .front", { opacity: 0, x: 200 });
-    gsap.set("#section1 .end", { opacity: 0, x: 200 });
-    gsap.set("#section1 .port", { opacity: 0, x: 200 });
+    gsap.set("#section1 .img", { opacity: 0,y: -200 });
+    gsap.set("#section1 .front", { opacity: 0, y: -200 });
+    gsap.set("#section1 .end", { opacity: 0, y: -200 });
+    gsap.set("#section1 .port", { opacity: 0, y: -200 });
 
     const ani3 = gsap.timeline();
 
-    ani3
-
-    .to("#section1 .img", {opacity: 1,duration:5  ,delay:2,  x: 0, ease: "back.inOut",})
-    .to("#section1 .front", {opacity: 1,duration:5  ,delay:2,  x: 0, ease: "back.inOut",})
-    .to("#section1 .end", {opacity: 1,duration:5 ,delay:2,  x:0 ,  ease: "back.inOut", })
-    .to("#section1 .port", { opacity: 1,duration:5  ,delay:2,  x: 0, ease: "back.inOut",})
+    ani3.to("#section1 .img", {opacity: 1,duration:5  ,delay:2,  y: 0, ease: "back.inOut",},"b")
+    .to("#section1 .front", {opacity: 1,duration:5  ,delay:2,  y: 0, ease: "back.inOut",},"b")
+    .to("#section1 .end", {opacity: 1,duration:5 ,delay:2,  y:0 ,  ease: "back.inOut", })
+    .to("#section1 .port", { opacity: 1,duration:5  ,delay:2,  y: 0, ease: "back.inOut",})
 
     ScrollTrigger.create({
     animation: ani3,
@@ -575,7 +593,7 @@
     start: "top top",
     end: "bottom bottom",
     scrub: 3,
-    markers: true,
+    markers: false,
     });
 </script>
 
