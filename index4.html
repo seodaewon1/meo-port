@@ -390,8 +390,8 @@ h3Element.addEventListener('mouseover', () => {
       tl.to(".text3 .char", {opacity: 1, y: 0,duration:1, stagger: { amount: 1, from: "random"},  ease: "circ.out", });
       tl.to(".text3 .char", {opacity:0, y: 300, duration:1, stagger: { amount: 1}, ease: "circ.out"},"c");
       tl.to(".text4 .char", {opacity: 1, y: 0, duration:1,  stagger: { amount: 1 },  ease: "circ.out", },"c");
-      tl.to(".scroll", { opacity: 1, ease: "circ.out" },"a");
-      tl.to("#header", { top: 0, ease: "circ.out" },"a");
+      tl.to(".scroll", { opacity: 1, ease: "circ.out" },"d");
+      tl.to("#header", { top: 0, ease: "circ.out" },"d");
       tl.eventCallback("onComplete", function () {
         document.body.style.overflow = "auto";
       });
