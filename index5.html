@@ -14,13 +14,13 @@
     <header id="header">
         <div class="left">
             <h1>Portfolio</h1>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Skill</a></li>
-                <li><a href="#">Comment</a></li>
-            </ul>
         </div>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Skill</a></li>
+            <li><a href="#">Comment</a></li>
+        </ul>
         <div class="right">
             <div>Date : <span class="date"></span></div>
             <div>Weather : rain</div>
@@ -565,6 +565,7 @@ window.addEventListener('scroll', updateScrollLength);
 <script>
     gsap.set("#section1 .desc .char", { opacity: 0, y: -200 });
     gsap.set("#header",{ top:-200 });
+    gsap.set(".weather",{ right:-200 });
 
     const tl = gsap.timeline();
 
