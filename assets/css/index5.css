@@ -99,4 +99,62 @@ body {
 }
 /* section1 */
 
+#section2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
+#section2 .about1 {
+    font-family: 'Poppins';
+}
+#section2 .about1 > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+   
+}
+
+
+#section2 .about2 {
+    position: absolute; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #cccccc49;
+}
+
+#section2 .about2>div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 400px;
+    background-color: #fff;
+}
+
+#section2 .about2 img{
+    width: 100%;
+    height: 100%;
+}
+#section2 .about2 .img1 {
+    position: absolute;
+}
+
+#section2 h4 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#section2 p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
