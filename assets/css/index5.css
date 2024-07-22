@@ -290,10 +290,11 @@ body {
   margin-bottom: 100px;
 }
 
-#section4 .list li {
+#section4 .list ul li {
   border-bottom: 1px solid #2e85e7;
   position: relative;
   padding-bottom: 10px;
+  overflow: hidden;
 }
 
 #section4 .list li span {
@@ -312,6 +313,7 @@ body {
   font-family: "IropkeBatang";
   display: block;
 }
+
 #section4 .list li a {
   background-image: url(../img/arrow.svg);
   background-repeat: no-repeat;
@@ -324,4 +326,19 @@ body {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+}
+
+
+/* section5 */
+#section5{
+padding: 20% 5% 7% 5%;
+    background-color: #2e85e7;
+    color: #fff;
+}
+#section5 .desc{
+  font-size: 3.8vw;
+    line-height: 1.2;
+    font-family: 'PPSupplyMono';
+    font-weight: 100;
+    letter-spacing: -0.2vw;
 }

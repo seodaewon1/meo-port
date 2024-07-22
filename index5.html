@@ -279,13 +279,13 @@
     </div>
     <!-- //section4 -->
 
-    <!-- <div id="section5">
+    <div id="section5">
         <div class="desc split">
             We are a design agency based in Copenhagen. With a strong belief in strategically founded and highly crafted
             digital experiences
         </div>
 
-        <div class="sec5-text">
+        <!-- <div class="sec5-text">
             <div class="text-left">
                 <h3>Which Statck do you use?</h3>
             </div>
@@ -322,8 +322,8 @@
                     <dd>Git과 같은 버전 관리 시스템을 사용하여 협업과 코드 관리를 수행할 수 있습니다.</dd>
                 </dl>
             </div>
-        </div>
-    </div> -->
+        </div> -->
+    </div>
     <!-- //section5 -->
 
     <!-- <div id="section6">
@@ -703,22 +703,17 @@
     <!-- section4 script -->
     <script>
       gsap.set("#section4 .desc .line", { opacity: 0 });
+      gsap.set("#section4 .list>ul>li", { opacity: 0, y:200});
+  
       const t4 = gsap.timeline();
-      t4.to(
-        "#section4 .desc .line",
-        {
-          opacity: 1,
-          duration: 1,
-          ease: "expo.Out",
-          stagger: { amount: 1, from: "random" },
-        },
-        "c"
-      );
+
+      t4.to( "#section4 .desc .line", {  opacity: 1,duration: 1,ease: "expo.Out",stagger: { amount: 1 , from: "random" }, }, "c")
+      t4.to( "#section4 .list>ul>li ", {  opacity: 1, y:0 ,ease: "expo.Out", })
       ScrollTrigger.create({
         animation: t4,
         trigger: "#section4",
-        start: "top top",
-        end: "+=4000",
+        start: "top 75%",
+        end: "+=7000",
         scrub: 3,
         markers: false,
       });
