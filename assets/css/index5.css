@@ -79,7 +79,7 @@ body {
 }
 
 #section1 .text {
-  margin-top: 10%;
+  margin-top: 20%;
   font-size: 26vw;
   line-height: 0.8;
   font-family: "Poppins";
@@ -141,7 +141,7 @@ body {
   transform: translate(-50%, -50%);
   width: 18vw;
   height: 21vw;
-
+  z-index: 100;
 }
 
 
