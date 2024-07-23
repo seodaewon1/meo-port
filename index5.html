@@ -951,25 +951,7 @@
         // section5를 관찰하기 시작
         observer.observe(section5);
       });
-  gsap.registerPlugin(ScrollTrigger);
 
-  // 초기 상태에서 .desc .word의 애니메이션을 비활성화
-  gsap.set("#section5 .desc", { opacity: 0, y: 50 });
-
-  // section5에 ScrollTrigger를 사용하여 애니메이션 트리거
-  ScrollTrigger.create({
-    trigger: "#section5",
-    start: "top center+=100", // 조정된 start 위치
-    onEnter: () => {
-      gsap.to("#section5 .desc", {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.2
-      });
-    },
-    once: true // 애니메이션이 한 번만 실행되도록 설정
-  });
     </script>
   </body>
 </html>
