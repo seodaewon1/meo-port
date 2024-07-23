@@ -196,8 +196,8 @@
         정리하여 저의 스킬을 볼 수 있도록 하였습니다.
       </div>
       <div class="text">
-        <div>code</div>
-        <div>list</div>
+        <div class="text__code">code</div>
+        <div class="text__list">list</div>
         <div class="imgWrap">
           <div class="img"></div>
         </div>
@@ -263,29 +263,18 @@
               <a href="#">CODEVIEW</a>
             </div>
           </li>
-          <li>
-            <span>Awards</span>
-            <em>Awwwards</em>
-            <div class="list__codeview">
-              <strong
-                >유기동물 플랫폼 웹사이트입니다. 유기동물들을 입양하고 정보를
-                공유하는 플랫폼입니다.</strong
-              >
-              <a href="#">CODEVIEW</a>
-            </div>
-          </li>
         </ul>
       </div>
     </div>
     <!-- //section4 -->
 
     <div id="section5">
-        <div class="desc split">
-            We are a design agency based in Copenhagen. With a strong belief in strategically founded and highly crafted
-            digital experiences
-        </div>
+      <div class="desc split">
+        Let me take this opportunity to elaborate on the diverse technical
+        skills I possess and how I have applied them in my projects.
+      </div>
 
-        <!-- <div class="sec5-text">
+      <!-- <div class="sec5-text">
             <div class="text-left">
                 <h3>Which Statck do you use?</h3>
             </div>
@@ -629,7 +618,7 @@
         start: "top 20%",
         end: "bottom center",
         scrub: true,
-        markers: true,
+        markers: false,
       });
 
       gsap.set(".about1 .text1 p .char", { opacity: 0 });
@@ -696,26 +685,68 @@
             pin: true,
             scrub: 1,
             end: () => "+=" + (totalWidth - window.innerWidth),
+            markers: true, // 디버깅을 위해 마커 추가
           },
         });
       });
     </script>
+
     <!-- section4 script -->
     <script>
-      gsap.set("#section4 .desc .line", { opacity: 0 });
-      gsap.set("#section4 .list>ul>li", { opacity: 0, y:200});
-  
-      const t4 = gsap.timeline();
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
 
-      t4.to( "#section4 .desc .line", {  opacity: 1,duration: 1,ease: "expo.Out",stagger: { amount: 1 , from: "random" }, }, "c")
-      t4.to( "#section4 .list>ul>li ", {  opacity: 1, y:0 ,ease: "expo.Out", })
-      ScrollTrigger.create({
-        animation: t4,
-        trigger: "#section4",
-        start: "top 75%",
-        end: "+=7000",
-        scrub: 3,
-        markers: false,
+        // section4 초기 설정
+        gsap.set("#section4 .desc .word", { opacity: 0 });
+        gsap.set("#section4 .text .text__code", { opacity: 0, x: 200 });
+        gsap.set("#section4 .text .text__list", { opacity: 0, x: -200 });
+        gsap.set("#section4 .list>ul>li", { opacity: 0, y: 200 });
+
+        // section4 애니메이션 타임라인 설정
+        const t4 = gsap.timeline();
+
+        t4.to("#section4 .desc .word", {
+          opacity: 1,
+          ease: "expo.Out",
+          stagger: { amount: 1, from: "random" },
+        })
+          .to(
+            "#section4 .text .text__code",
+            {
+              opacity: 1,
+              duration: 1,
+              ease: "expo.Out",
+              x: 0,
+            },
+            "e"
+          )
+          .to(
+            "#section4 .text .text__list",
+            {
+              opacity: 1,
+              duration: 1,
+              ease: "expo.Out",
+              x: 0,
+            },
+            "e"
+          )
+          .to("#section4 .list>ul>li", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "expo.Out",
+            stagger: { amount: 1, from: "start" },
+          });
+
+        // section4에 ScrollTrigger 생성
+        ScrollTrigger.create({
+          animation: t4,
+          trigger: "#section4",
+          start: "top 80%", // start 포지션 조정
+          end: "bottom 80%", // end 포지션 조정
+          scrub: 2,
+          markers: true, // 디버깅을 위해 마커 추가
+        });
       });
     </script>
   </body>
