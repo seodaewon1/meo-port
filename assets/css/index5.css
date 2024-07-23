@@ -11,11 +11,15 @@
 body {
   background: #e4edf2;
   color: #2e85e7;
+  /* overflow: hidden; */
 }
 
 #header {
   position: fixed;
-  width: 100%;
+  left: 20px;
+  right: 20px;
+  top: 0;
+  width: calc(100% - 40px);
   background-color: transparent;
   backdrop-filter: blur(10px);
   display: flex;
@@ -23,8 +27,12 @@ body {
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #2e85e7;
-  font-family: "PPSupplySans";
+  font-family: "PPSupplyMono";
   z-index: 1000;
+}
+#header.active {
+  color: #fff;
+  border-bottom: 1px solid #fff;
 }
 
 #header .left {
@@ -51,17 +59,19 @@ body {
   padding-right: 20px;
   text-align: right;
 }
-
+.weather.active {
+  color: #fff;
+  border: 1px solid #fff;
+}
 .weather {
   position: fixed;
   top: 80px;
-  right: 20px;
+  right: 30px;
   border: 1px solid #2e85e7;
   z-index: 10000;
   background-color: transparent;
   backdrop-filter: blur(10px);
   padding: 10px 20px;
-
   font-family: "PPSupplyMono";
 }
 
@@ -81,7 +91,7 @@ body {
 #section1 .text {
   margin-top: 20%;
   font-size: 26vw;
-  line-height: 0.8;
+  line-height: 0.6;
   font-family: "Poppins";
   font-weight: 800;
   text-transform: uppercase;
@@ -122,6 +132,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 600px;
+  z-index: 100;
 }
 
 #section2 .about2 {
@@ -139,9 +150,8 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 18vw;
-  height: 21vw;
-  z-index: 100;
+  width: 13vw;
+  height: 16vw;
 }
 
 #section2 .about2 img {
@@ -279,7 +289,7 @@ body {
   letter-spacing: -0.2vw;
 }
 
-#section4 .text {
+#section4 .section4__text {
   margin-top: 10%;
   font-size: 26vw;
   line-height: 0.8;
@@ -328,17 +338,73 @@ body {
   overflow: hidden;
 }
 
-
 /* section5 */
-#section5{
-padding: 20% 5% 7% 5%;
-    background-color: #2e85e7;
-    color: #fff;
+#section5 {
+  padding: 20% 5% 7% 5%;
+  background-color: #2e85e7;
+  color: #fff;
 }
-#section5 .desc{
+#section5 .desc {
   font-size: 3.8vw;
-    line-height: 1.2;
-    font-family: 'PPSupplyMono';
-    font-weight: 100;
-    letter-spacing: -0.2vw;
+  line-height: 1.2;
+  font-family: "PPSupplyMono";
+  font-weight: 100;
+  letter-spacing: -0.2vw;
+}
+.sec5-text {
+  display: flex;
+  margin-top: 14%;
+}
+
+.sec5-text .text-left {
+  width: 55%;
+  /* background-color: #cccc; */
+}
+
+.sec5-text .text-left h3 {
+  font-family: "Poppins";
+  color: #fff;
+  font-size: 8vw;
+  line-height: 0.9;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: -0.7vw;
+  position: sticky;
+  left: 0;
+  top: 90px;
+}
+
+.sec5-text .text-right {
+  width: 45%;
+  margin-top: -1.2vw;
+}
+
+.sec5-text .text-right dt {
+  font-family: "iceJaram-Rg";
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+.sec5-text .text-right dt.noTop {
+  margin-top: 0;
+}
+
+.sec5-text .text-right dd {
+  font-family: "IropkeBatang";
+  font-size: 20px;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 28px;
+}
+
+.sec5-text .text-right dd::before {
+  content: "";
+  background-image: url(../img/check.svg);
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  border-radius: 3px;
 }
