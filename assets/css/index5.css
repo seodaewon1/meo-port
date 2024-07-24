@@ -14,51 +14,52 @@ body {
   /* overflow: hidden; */
 }
 
-#header {
-  position: fixed;
-  left: 20px;
-  right: 20px;
-  top: 0;
-  width: calc(100% - 40px);
-  background-color: transparent;
-  backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #2e85e7;
-  font-family: "PPSupplyMono";
-  z-index: 1000;
-}
-#header.active {
-  color: #fff;
-  border-bottom: 1px solid #fff;
-}
+  #header {
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    top: 0;
+    width: calc(100% - 40px);
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #2e85e7;
+    font-family: "PPSupplyMono";
+    z-index: 1000;
+  }
+  #header.active {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
 
-#header .left {
-  display: flex;
-  align-items: center;
-}
+  #header .left {
+    display: flex;
+    align-items: center;
+  }
 
-#header .left h1 {
-  margin-right: 20px;
-  margin-left: 20px;
-  font-weight: 800;
-}
+  #header .left h1 {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 800;
+  }
 
-#header ul {
-  display: flex;
-}
+  #header ul {
+    display: flex;
+  }
 
-#header ul li a {
-  display: inline-block;
-  padding: 10px 20px;
-}
+  #header ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+  }
 
-#header .right {
-  padding-right: 20px;
-  text-align: right;
-}
+  #header .right {
+    padding-right: 20px;
+    text-align: right;
+  }
+
 .weather.active {
   color: #fff;
   border: 1px solid #fff;
