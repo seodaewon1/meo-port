@@ -36,7 +36,7 @@
     <div id="section1">
       <div class="desc split">
         안녕하세요 저는 시각적으로 매력적이고 사용자 친화적인 웹사이트를 만드는
-        데 열정을 갖고 있는 야심찬 프론트엔드 개발자를 꿈꾸고 있습니다. 저는
+        데 열정을 갖고 있는 야심찬 프론트엔드 개발자를 꿈꾸고 있습니다.저는
         HTML, CSS, JavaScript에 대한 탄탄한 기초를 갖추고 있으며 React와 같은
         최신 프레임워크에서 지속적으로 기술을 확장하고 있습니다.
       </div>
@@ -639,11 +639,10 @@
       }, 1000);
 
       gsap.set("#section1 .img", { opacity: 1, y: -200, });
-      gsap.set("#section1 .img img", {scale:1.2,  });
       gsap.set("#section1 .text", { opacity: 1, y: 0 ,});
-      gsap.set("#section1 .front", { opacity: 1, y: 100, });
-      gsap.set("#section1 .end", { opacity: 1, y: 100,  });
-      gsap.set("#section1 .port", { opacity: 1, y: 100,  });
+      gsap.set("#section1 .front", { opacity: 1, y: 100, x:-200});
+      gsap.set("#section1 .end", { opacity: 1, y: 100,x: 200  });
+      gsap.set("#section1 .port", { opacity: 1, y: 100, x: -200 });
 
       const t2 = gsap.timeline();
 
@@ -659,7 +658,7 @@
         )
         .to(
           "#section1 .front",
-          { opacity: 1, x: "100vw", duration: 1, ease: "expo.inOut" },
+          { opacity: 1, x: 500, duration: 1, ease: "expo.inOut" },
           0.1
         )
         .to(
@@ -667,7 +666,7 @@
           {
             opacity: 1,
             duration: 1,
-            x: "-100vw",
+            x: -500,
             ease: "expo.inOut",
           },
           0.1
@@ -677,16 +676,11 @@
           {
             opacity: 1,
             duration: 1,
-            x: "100vw",
+            x: 500,
             ease: "expo.inOut",
           },
           "b"
         )
-        .to(
-        "#section1 .img img",
-        {  y: 80, duration: 1, ease: "back.out" },
-       0.4
-      );
 
       ScrollTrigger.create({
         animation: t2,

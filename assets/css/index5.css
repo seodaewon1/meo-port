@@ -126,6 +126,7 @@ body {
 
 #section2 .about1 {
   font-family: "iceJaram-Rg";
+    text-align: center;
 }
 #section2 .about1 > div {
   position: absolute;
@@ -134,6 +135,10 @@ body {
   transform: translate(-50%, -50%);
   width: 600px;
   z-index: 100;
+
+}#section2 .about1 h4,
+#section2 .about1 p{
+  text-align: center;
 }
 
 #section2 .about2 {
