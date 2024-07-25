@@ -72,25 +72,25 @@
       </div>
       <div class="about2">
         <div class="img1">
-          <img src="./assets/img/insta.jpg" alt="Image 1" />
+          <img src="./assets/img/KakaoTalk_20240725_092842023_04.jpg" alt="Image 1" />
         </div>
         <div class="img2">
-          <img src="./assets/img/insta.jpg" alt="Image 1" />
+          <img src="./assets/img/KakaoTalk_20240725_045559787_04.jpg" alt="Image 1" />
         </div>
         <div class="img3">
-          <img src="./assets/img/insta.jpg" alt="Image 1" />
+          <img src="./assets/img/KakaoTalk_20240725_045559787_03.jpg" alt="Image 1" />
         </div>
         <div class="img4">
-          <img src="./assets/img/insta.jpg" alt="Image 1" />
+          <img src="./assets/img/KakaoTalk_20240725_045559787_05.jpg" alt="Image 1" />
         </div>
         <div class="img5">
-          <img src="./assets/img/insta.jpg" alt="Image 1" />
+          <img src="./assets/img/KakaoTalk_20240725_092842023.jpg" alt="Image 1" />
         </div>
         <div class="img6">
-          <img src="./assets/img/insta.jpg" alt="Image 1" />
+          <img src="./assets/img/KakaoTalk_20240725_092842023_01.jpg" alt="Image 1" />
         </div>
         <div class="img7">
-          <img src="./assets/img/insta.jpg" alt="Image 1" />
+          <img src="./assets/img/KakaoTalk_20240725_092842023_02.jpg" alt="Image 1" />
         </div>
         <div class="img8">
           <img src="./assets/img/insta.jpg" alt="Image 1" />
@@ -99,7 +99,7 @@
     </div>
     <!-- //section2 -->
 
-    <!-- <div id="section3">
+    <div id="section3">
       <h4>{ 포트폴리오 }</h4>
       <div class="port-wrap">
         <div class="port p1">
@@ -112,8 +112,8 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODE VIEW</span></a>
-            <span>SITE VIEW</span>
+            <a href=""> <span>CODEVIEW</span></a>
+            <span>SITEVIEW</span>
           </div>
         </div>
 
@@ -129,8 +129,8 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODE VIEW</span></a>
-            <span>SITE VIEW</span>
+            <a href=""> <span>CODEVIEW</span></a>
+            <span>SITEVIEW</span>
           </div>
         </div>
         <div class="port p3">
@@ -144,8 +144,8 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODE VIEW</span></a>
-            <span>SITE VIEW</span>
+            <a href=""> <span>CODEVIEW</span></a>
+            <span>SITEVIEW</span>
           </div>
         </div>
         <div class="port p4">
@@ -159,8 +159,8 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODE VIEW</span></a>
-            <span>SITE VIEW</span>
+            <a href=""> <span>CODEVIEW</span></a>
+            <span>SITEVIEW</span>
           </div>
         </div>
         <div class="port p5">
@@ -174,8 +174,8 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODE VIEW</span></a>
-            <span>SITE VIEW</span>
+            <a href=""> <span>CODEVIEW</span></a>
+            <span>SITEVIEW</span>
           </div>
         </div>
         <div class="port p6">
@@ -188,8 +188,8 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODE VIEW</span></a>
-            <a href=""></a><span>SITE VIEW</span><a></a>
+            <a href=""> <span>CODEVIEW</span></a>
+            <a href=""></a><span>SITEVIEW</span><a></a>
           </div>
         </div>
         <div class="port p7">
@@ -203,12 +203,12 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODE VIEW</span></a>
-            <a href=""></a><span>SITE VIEW</span><a></a>
+            <a href=""> <span>CODEVIEW</span></a>
+            <a href=""></a><span>SITEVIEW</span><a></a>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- //section3 -->
 
     <!-- <div id="section4">
@@ -531,6 +531,8 @@
       let words = SplitClient.words;
       let chars = SplitClient.chars;
     </script>
+    <!-- lenis script -->
+
     <script>
       const startTime = new Date();
       // 현재 날짜 업데이트 함수
@@ -568,6 +570,8 @@
         setInterval(updateElapsedTime, 1000); // 1초마다 경과 시간 업데이트
       });
     </script>
+    <!-- time script -->
+
     <script>
       const img = document.querySelector(".imgWrap .img");
 
@@ -618,7 +622,8 @@
       // 스크롤 이벤트 리스너 추가
       window.addEventListener("scroll", updateScrollLength);
     </script>
-    <!-- section1 -->
+    <!-- section1 script -->
+
     <script>
       gsap.set("#section1 .desc .char", { opacity: 0, y: -200 });
       gsap.set("#header", { top: -200 });
@@ -638,9 +643,9 @@
           .to(".weather", { right: 20, ease: "expo.inOut" }, "a");
       }, 1000);
 
-      gsap.set("#section1 .front", { x: "-5vw" });
-      gsap.set("#section1 .end", { x: "5vw" });
-      gsap.set("#section1 .port", { x: "-5vw" });
+      gsap.set("#section1 .front", { x: "-10vw" });
+      gsap.set("#section1 .end", { x: "30vw" });
+      gsap.set("#section1 .port", { x: "-10vw" });
 
       const t2 = gsap.timeline();
 
@@ -651,12 +656,12 @@
       )
         .to(
           "#section1 .text",
-          { duration: 1, y: -"5vw", ease: "expo.inOut" },
+          { duration: 1, y: "5vw", ease: "expo.inOut" },
           "b"
         )
         .to(
           "#section1 .front",
-          { x: "30vw", duration: 1, ease: "expo.inOut" },
+          { x: "25vw", duration: 1, ease: "expo.inOut" },
           0.1
         )
         .to(
@@ -664,17 +669,17 @@
           {
             opacity: 1,
             duration: 1,
-            x: "-30vw",
+            x: "-8vw",
             ease: "expo.inOut",
           },
-          0.1
+         "b"
         )
         .to(
           "#section1 .port",
           {
             opacity: 1,
             duration: 1,
-            x: "30vw",
+            x: "25vw",
             ease: "expo.inOut",
           },
           "b"
@@ -683,12 +688,17 @@
       ScrollTrigger.create({
         animation: t2,
         trigger: "#section1",
-        start: "top  60vw",
-        end: "bottom top",
+        start: "top  40%",
+        end: "bottom 20%",
         scrub: 1,
         markers: true,
       });
-      gsap.set(".about1 .text1 p .char", { opacity: 0 });
+    
+    </script>
+    <!-- section2 script -->
+
+    <script>
+        gsap.set(".about1 .text1 p .char", { opacity: 0 });
       gsap.set(".about1 .text1 h4 .char", { opacity: 0 });
 
       //   gsap.set(".about2 .img1 img", { opacity: 0 });
@@ -820,6 +830,7 @@
       });
     </script>
     <!-- section3 script -->
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         gsap.registerPlugin(ScrollTrigger);
@@ -846,6 +857,7 @@
       });
     </script>
     <!-- section4 script -->
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         gsap.registerPlugin(ScrollTrigger);
@@ -910,6 +922,7 @@
       });
     </script>
     <!-- section5 script -->
+
     <script>
       // Intersection Observer 설정
       document.addEventListener("DOMContentLoaded", () => {
