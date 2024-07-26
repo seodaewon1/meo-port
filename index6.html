@@ -36,16 +36,15 @@
     <div id="section1">
       <div class="desc split">
         저는 사용자 친화적인 웹사이트를 만드는 데 열정을 갖고 있는 야심찬
-        프론트엔드 개발자를 꿈꾸고 있습니다.<br />
-        저는 HTML, CSS, JavaScript에 대한 탄탄한 기초를 갖추고 있으며 React와
-        같은 최신 프레임워크에서 지속적으로 기술에 대해 꾸준히 공부하고
-        있습니다.
+        프론트엔드 개발자를 꿈꾸고 있습니다. 저는 HTML, CSS, JavaScript에 대한
+        탄탄한 기초를 갖추고 있으며 React와 같은 최신 프레임워크에서 지속적으로
+        기술에 대해 꾸준히 공부하고 있습니다.
       </div>
       <div class="text">
-        <div class="front">FRONT</div>
-        <div class="end">END</div>
-        <div class="port">PORT</div>
-        <div class="img">
+        <div class="t1 parallax__item__left">FRONT</div>
+        <div class="t2 parallax__item__right">END</div>
+        <div class="t3 parallax__item__left2">PORT</div>
+        <div class="img parallax__item__desc">
           <img src="./assets/img/daewon.jpg" alt="dd" />
         </div>
       </div>
@@ -57,13 +56,14 @@
         <div class="text1">
           <h4 class="split">서대원</h4>
           <p class="split">
-            저는 미디어콘텐츠과, 스마트콘텐츠과를 전공하였습니다. 콘텐츠 제작과
-            영상 편집에 대해 공부하였지만 흥미가 점차 떨어지게 되면서 평소
-            컴퓨터를 다루기 좋아하였기에 여러가지 알아보던 중 코딩이라는 주제를
-            접하게 되었고 그 중 프론트 앤드 개발자에 대해 알게 되어 학원을
-            다니며 배우게 되었습니다. 코딩을 자세히 배워 가는 과정에서 제
-            머리속에서 구상한 코드대로 만들어지는 결과를 보니 점차 흥미가 생기기
-            시작하여 지금에 프론트 엔드 개발자를 꿈꾸게 되었습니다.
+            저는 미디어콘텐츠과, 스마트콘텐츠과를 전공하였습니다.<br />
+            콘텐츠 제작과 영상 편집에 대해 공부하였지만 흥미가 점차 떨어지게<br />
+            되면서 평소 컴퓨터를 다루기 좋아하였기에 여러가지 알아보던 중<br />
+            코딩이라는 주제를 접하게 되었고 그 중 프론트 앤드 개발자에 대해 알게<br />
+            되어 학원을 다니며 배우게 되었습니다. 코딩을 자세히 배워 가는<br />
+            과정에서 제 머리속에서 구상한 코드대로 만들어지는 결과를 보니 점차<br />
+            흥미가 생기기 시작하여 지금에 프론트 엔드 개발자를 꿈꾸게<br />
+            되었습니다.
           </p>
         </div>
         <div class="text2"></div>
@@ -134,7 +134,7 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODEVIEW</span></a>
+            <span><a href=""></a>CODEVIEW </a></span>
             <span>SITEVIEW</span>
           </div>
         </div>
@@ -151,7 +151,7 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODEVIEW</span></a>
+            <span> <a href=""> CODEVIEW</a></span>
             <span>SITEVIEW</span>
           </div>
         </div>
@@ -659,10 +659,13 @@
 
     <!-- section1 script -->
     <script>
-      gsap.set("#section1 .desc .char", { opacity: 0, y: -200 });
+      gsap.set("#section1 .desc .char", { opacity: 0, y: 200 });
       gsap.set("#header", { top: "-20vw" });
       gsap.set(".weather", { right: "-20vw" });
-
+      gsap.set("#section1 .img", { opacity: 0, y: 200 });
+      gsap.set("#section1 .t1", { opacity: 1, y: 200 });
+      gsap.set("#section1 .t2", { opacity: 1, y: 200 });
+      gsap.set("#section1 .t3", { opacity: 1, y: 200 });
       const tl = gsap.timeline();
 
       setTimeout(() => {
@@ -673,83 +676,95 @@
           stagger: { amount: 1, from: "random" },
           ease: "expo.out",
         })
-          .to("#header", { top: 0, duration: 2, ease: "expo.inOut" }, "a")
-          .to(".weather", { right: 20, duration: 2, ease: "expo.inOut" }, "a");
+          .to("#header", { top: 0, ease: "expo.inOut" })
+          .to(".weather", { right: 20, ease: "expo.inOut" })
+          .to("#section1 .img", { opacity: 1, y: 0, ease: "expo.inOut" })
+          .to("#section1 .t1", { opacity: 1, y: 0, ease: "expo.inOut" })
+          .to("#section1 .t2", { opacity: 1, y: 0, ease: "expo.inOut" })
+          .to("#section1 .t3", { opacity: 1, y: 0, ease: "expo.inOut" });
       }, 1000);
 
-      gsap.set("#section1 .front", { x: "-10vw" });
-      gsap.set("#section1 .end", { x: "30vw" });
-      gsap.set("#section1 .port", { x: "-10vw" });
-
-      const t2 = gsap.timeline();
-
-      t2.to(
-        "#section1 .img",
-        { opacity: 1, y: "1vw", duration: 1, y: "5vw", ease: "back.inOut" },
-        "b"
-      )
-        .to(
-          "#section1 .text",
-          { duration: 1, y: "5vw", ease: "expo.inOut" },
-          "b"
-        )
-        .to(
-          "#section1 .front",
-          { x: "25vw", duration: 1, ease: "expo.inOut" },
-          0.1
-        )
-        .to(
-          "#section1 .end",
-          {
-            opacity: 1,
-            duration: 1,
-            x: "-8vw",
-            ease: "expo.inOut",
+      gsap.utils.toArray(".parallax__item__desc").forEach((item) => {
+        gsap.to(item, {
+          yPercent: -50,
+          ease: "power4.out",
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ".parallax__item__desc",
+            start: "top center",
+            end: "bottom top",
+            markers: true,
+            scrub: true,
           },
-          "b"
-        )
-        .to(
-          "#section1 .port",
-          {
-            opacity: 1,
-            duration: 1,
-            x: "25vw",
-            ease: "expo.inOut",
+        });
+      });
+      gsap.utils.toArray(".parallax__item__left").forEach((item) => {
+        gsap.to(item, {
+          xPercent: -50,
+          ease: "power4.out",
+          duration: 1,
+          scrollTrigger: {
+            trigger: ".parallax__item__left",
+            start: "top center",
+            end: "bottom top",
+            markers: true,
+            scrub: 1,
           },
-          "b"
+        });
+      });
+      gsap.utils.toArray(".parallax__item__right").forEach((item) => {
+        gsap.to(item, {
+          xPercent: 50,
+          ease: "power4.out",
+          duration: 1,
+          scrollTrigger: {
+            trigger: ".parallax__item__right",
+            start: "top center",
+            end: "bottom top",
+            markers: true,
+            scrub: 1,
+          },
+        });
+      });
+      gsap.utils.toArray(".parallax__item__left2").forEach((item) => {
+        gsap.to(
+          item,
+          {
+            xPercent: -50,
+            ease: "power4.out",
+            duration: 1,
+            scrollTrigger: {
+              trigger: ".parallax__item__left2",
+              start: "top center",
+              end: "bottom top",
+              markers: true,
+              scrub: 1,
+            },
+          },
+          0.8
         );
-
-      ScrollTrigger.create({
-        animation: t2,
-        trigger: "#section1",
-        start: "top  40%",
-        end: "bottom 20%",
-        scrub: 1,
-        markers: true,
       });
     </script>
 
     <!-- section2 script -->
     <script>
-      gsap.set(".about1 .text1 p .char", { opacity: 0 });
-      gsap.set(".about1 .text1 h4 .char", { opacity: 0 });
+      gsap.set(".about1 .text1 p .line", {y:100, opacity: 0 });
+      gsap.set(".about1 .text1 h4 .line", {y:100, opacity: 0 });
+      gsap.set(".about2", { y: 100, opacity: 0 });
 
       //   gsap.set(".about2 .img1 img", { opacity: 0 });
       const t3 = gsap.timeline();
       t3.to(
-        ".about1 .text1 p .char",
-        { opacity: 1, duration: 1, ease: "expo.Out" },
+        ".about1 .text1 p .line",
+        { y:0, opacity: 1, duration: 1, stagger: { amount: 1 }, ease: "expo.Out" },
         "c"
       );
       t3.to(
-        ".about1 .text1 h4 .char",
-        {
-          opacity: 1,
-          duration: 1,
-          ease: "expo.Out",
-        },
+        ".about1 .text1 h4 .line",
+        { y:0, opacity: 1, duration: 1, ease: "expo.Out" },
         "c"
       );
+      t3.to(".about2", { y: 0, opacity: 1, ease: "expo.Out" });
       t3.to(
         ".about2 .img8 img",
         {
@@ -760,7 +775,7 @@
           opacity: 1,
           ease: "expo.Out",
         },
-        "c"
+        "d"
       )
         .to(
           ".about2 .img7 img",
@@ -772,7 +787,7 @@
             opacity: 1,
             ease: "expo.Out",
           },
-          "c"
+          "d"
         )
         .to(
           ".about2 .img6 img",
@@ -784,7 +799,7 @@
             opacity: 1,
             ease: "expo.Out",
           },
-          "c"
+          "d"
         )
         .to(
           ".about2 .img5 img",
@@ -796,7 +811,7 @@
             opacity: 1,
             ease: "expo.Out",
           },
-          "c"
+          "d"
         )
         .to(
           ".about2 .img4 img",
@@ -808,7 +823,7 @@
             opacity: 1,
             ease: "expo.Out",
           },
-          "c"
+          "d"
         )
         .to(
           ".about2 .img3 img",
@@ -820,7 +835,7 @@
             opacity: 1,
             ease: "expo.Out",
           },
-          "c"
+          "d"
         )
 
         .to(
@@ -833,7 +848,7 @@
             opacity: 1,
             ease: "expo.Out",
           },
-          "c"
+          "d"
         )
         .to(
           ".about2 .img1 img",
@@ -845,7 +860,7 @@
             opacity: 1,
             ease: "expo.Out",
           },
-          "c"
+          "d"
         );
 
       ScrollTrigger.create({
@@ -853,9 +868,9 @@
         trigger: "#section2",
         pin: true,
         start: "top top",
-        end: "+=5000",
+        end: "+=8000",
         scrub: 2,
-        markers: false,
+        markers: true,
       });
     </script>
 
