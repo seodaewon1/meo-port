@@ -187,11 +187,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding: 5px 20px;
-  width: 400%;
+  width: 4450px;
 }
 
 .port-wrap .port {
-  width: calc(50vw - 60px);
+  width: 610px;
   margin-right: 20px;
   border-radius: 10px;
   overflow: hidden;
@@ -225,14 +225,14 @@ body {
   width: 100%;
   padding: 0;
   font-family: "iceJaram-Rg";
-  font-size: 5vw;
+  font-size: 5rem;
 }
 
 .port-wrap .port .info p {
   color: #fff;
   font-family: "IropkeBatang";
   width: 100%;
-  font-size: 1vw;
+  font-size: 1rem;
 }
 
 .port-wrap .port img {

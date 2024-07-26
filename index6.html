@@ -312,6 +312,20 @@
         </div>
         <div class="text-right">
           <dl>
+            <dt class="noTop">{ Html & CSS }</dt>
+            <dd>
+              HTML과 CSS를 사용하여 웹 페이지의 구조와 스타일을 설계하고
+              구현했습니다. 시맨틱 마크업을 사용하여 접근성과 SEO를 고려한 웹
+              페이지를 작성할 수 있으며, 최신 CSS3 기술을 활용하여 반응형
+              디자인과 애니메이션을 구현하는 데 능숙합니다.
+            </dd>
+            <dd>
+              Sass와 같은 CSS 전처리기를 사용하여 유지보수와 재사용성이 높은
+              스타일시트를 작성하고, Flexbox와 Grid 레이아웃을 활용하여 복잡한
+              레이아웃도 효율적으로 구성할 수 있습니다.
+            </dd>
+          </dl>
+          <dl>
             <dt class="noTop">{ JavaScript }</dt>
             <dd>
               JavaScript를 사용하여 다양한 웹 애플리케이션을 개발했습니다. ES6+
@@ -324,17 +338,16 @@
             </dd>
           </dl>
           <dl>
-            <dt class="noTop">{ Html & CSS }</dt>
+            <dt>{ PHP & MySQL }</dt>
             <dd>
-              HTML과 CSS를 사용하여 웹 페이지의 구조와 스타일을 설계하고
-              구현했습니다. 시맨틱 마크업을 사용하여 접근성과 SEO를 고려한 웹
-              페이지를 작성할 수 있으며, 최신 CSS3 기술을 활용하여 반응형
-              디자인과 애니메이션을 구현하는 데 능숙합니다.
+              PHP와 MySQL을 사용하여 안정적이고 확장 가능한 백엔드 시스템을
+              구축했습니다. Laravel과 같은 PHP 프레임워크를 사용하여 MVC
+              아키텍처 기반의 웹 애플리케이션을 개발했으며, MySQL 데이터베이스를
+              효율적으로 설계하고 최적화했습니다.
             </dd>
             <dd>
-              Sass와 같은 CSS 전처리기를 사용하여 유지보수와 재사용성이 높은
-              스타일시트를 작성하고, Flexbox와 Grid 레이아웃을 활용하여 복잡한
-              레이아웃도 효율적으로 구성할 수 있습니다.
+              RESTful API를 설계하고 구현하여 프론트엔드와 백엔드 간의 통신을
+              원활하게 처리했습니다.
             </dd>
           </dl>
           <dl>
@@ -373,19 +386,6 @@
             <dd>
               Styled Components와 CSS 모듈을 사용하여 스타일링을 모듈화하고,
               코드 스플리팅을 통해 성능을 최적화했습니다.
-            </dd>
-          </dl>
-          <dl>
-            <dt>{ PHP & MySQL }</dt>
-            <dd>
-              PHP와 MySQL을 사용하여 안정적이고 확장 가능한 백엔드 시스템을
-              구축했습니다. Laravel과 같은 PHP 프레임워크를 사용하여 MVC
-              아키텍처 기반의 웹 애플리케이션을 개발했으며, MySQL 데이터베이스를
-              효율적으로 설계하고 최적화했습니다.
-            </dd>
-            <dd>
-              RESTful API를 설계하고 구현하여 프론트엔드와 백엔드 간의 통신을
-              원활하게 처리했습니다.
             </dd>
           </dl>
         </div>
@@ -656,8 +656,8 @@
       // 초기 실행 (페이지 로드 시 현재 스크롤 위치 표시)
       updateScrollPercentage();
     </script>
-    <!-- section1 script -->
 
+    <!-- section1 script -->
     <script>
       gsap.set("#section1 .desc .char", { opacity: 0, y: -200 });
       gsap.set("#header", { top: "-20vw" });
@@ -728,8 +728,8 @@
         markers: true,
       });
     </script>
-    <!-- section2 script -->
 
+    <!-- section2 script -->
     <script>
       gsap.set(".about1 .text1 p .char", { opacity: 0 });
       gsap.set(".about1 .text1 h4 .char", { opacity: 0 });
@@ -858,8 +858,8 @@
         markers: false,
       });
     </script>
-    <!-- section3 script -->
 
+    <!-- section3 script -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         gsap.registerPlugin(ScrollTrigger);
@@ -877,7 +877,7 @@
           scrollTrigger: {
             trigger: "#section3",
             pin: true,
-            scrub: 1,
+            scrub: 3,
             start: "top 65.8px", // start scrolling after header height of 65.8px
             end: () => "+=" + (totalWidth - window.innerWidth),
             markers: false, // 디버깅을 위해 마커 추가
@@ -986,5 +986,6 @@
         observer.observe(section5);
       });
     </script>
+    <!-- color change -->
   </body>
 </html>
