@@ -12,13 +12,13 @@
   <body>
     <header id="header">
       <div class="left">
-        <h1>FRONT+END</h1>
+        <h1><a href="/">FRONT+END</a></h1>
       </div>
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Project</a></li>
-        <li><a href="#">Skill</a></li>
-        <li><a href="#">Comment</a></li>
+        <li><a href="#section2">About</a></li>
+         <li><a href="#section3">Project</a></li>
+      <li><a href="#section5">Skill</a></li>
+      <li><a href="#section6">Comment</a></li>
       </ul>
       <div class="right">
         <div><span class="date"></span></div>
@@ -125,7 +125,7 @@
       <h4>{ 포트폴리오 }</h4>
       <div class="port-wrap">
         <div class="port p1">
-          <img src="./assets/img/Frame01.jpg" alt="" />
+          <img src="./assets/img/Frame01.jpg" alt="#" />
           <div class="info">
             <h5>{ PlayList}</h5>
             <p>
@@ -134,8 +134,8 @@
             </p>
           </div>
           <div class="skill">
-            <span><a href=""></a>CODEVIEW </a></span>
-            <span>SITEVIEW</span>
+            <span><a href="https://github.com/seodaewon1/playlist"></a>CODEVIEW </a></span>
+            <span><a href="https://attraction-three.vercel.app/">SITEVIEW</a></span>
           </div>
         </div>
 
@@ -151,8 +151,8 @@
             </p>
           </div>
           <div class="skill">
-            <span> <a href=""> CODEVIEW</a></span>
-            <span>SITEVIEW</span>
+            <span> <a href="https://github.com/seodaewon1/attraction"> CODEVIEW</a></span>
+            <span><a href="https://attraction-three.vercel.app/">SITEVIEW</a></span>
           </div>
         </div>
         <div class="port p3">
@@ -166,8 +166,8 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODEVIEW</span></a>
-            <span>SITEVIEW</span>
+             <span><a href="https://github.com/seodaewon1/booking">CODEVIEW</a></span>
+            <span><a href="https://booking-ruddy.vercel.app/">SITEVIEW</a></span>
           </div>
         </div>
         <div class="port p4">
@@ -181,8 +181,8 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODEVIEW</span></a>
-            <span>SITEVIEW</span>
+             <span><a href="https://github.com/seodaewon1/vue-port">CODEVIEW</a></span>
+            <span><a href="https://vue-port-sandy.vercel.app/">SITEVIEW</a></span>
           </div>
         </div>
         <div class="port p5">
@@ -196,8 +196,8 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODEVIEW</span></a>
-            <span>SITEVIEW</span>
+             <span><a href="https://github.com/seodaewon1/mvking-vue">CODEVIEW</a></span>
+            <span><a href="https://mvking-vue.vercel.app/">SITEVIEW</a></span>
           </div>
         </div>
         <div class="port p6">
@@ -210,8 +210,8 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODEVIEW</span></a>
-            <a href=""></a><span>SITEVIEW</span><a></a>
+             <span><a href="">CODEVIEW</a></span>
+            <span><a href="">SITEVIEW</a></span>
           </div>
         </div>
         <div class="port p7">
@@ -225,8 +225,8 @@
             </p>
           </div>
           <div class="skill">
-            <a href=""> <span>CODEVIEW</span></a>
-            <a href=""></a><span>SITEVIEW</span><a></a>
+             <span><a href="">CODEVIEW</a></span>
+            <span><a href="">SITEVIEW</a></span>
           </div>
         </div>
       </div>
@@ -268,7 +268,7 @@
                 >PHP를 활용하여 제작한 블로그 사이트입니다. PHP에 개념과 로그인,
                 게시판 기능을 구현하였습니다.</strong
               >
-              <a href="#">CODEVIEW</a>
+              <a href="http://eodnjs1019.dothome.co.kr/">CODEVIEW</a>
             </div>
           </li>
           <li>
@@ -393,7 +393,7 @@
     </div>
     <!-- //section5 -->
 
-    <!-- <div id="section6">
+    <div id="section6">
         <div class="sec6-text">
             <div class="text-left">
                 <h3>WHICH STATCK DO SAY HI!</h3>
@@ -488,10 +488,10 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- //section6 -->
 
-    <!-- <div id="section7">
+    <div id="section7">
         <span>SAY bye!</span>
         <div class="bottom">
             <ul>
@@ -501,7 +501,7 @@
                 <li><a href="#">contact</a></li>
             </ul>
         </div>
-    </div> -->
+    </div>
     <!-- //section7 -->
 
     <!-- <div class="modal__wrap">
@@ -598,6 +598,16 @@
     <!-- time script -->
 
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+  document.querySelectorAll("header ul li a").forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      gsap.to(window, { duration: 1, scrollTo: this.getAttribute("href") });
+    });
+  });
+})
       const img = document.querySelector(".imgWrap .img");
 
       gsap.to(img, {
@@ -693,7 +703,7 @@
             trigger: ".parallax__item__desc",
             start: "top center",
             end: "bottom top",
-            markers: true,
+            markers: false,
             scrub: true,
           },
         });
@@ -707,7 +717,7 @@
             trigger: ".parallax__item__left",
             start: "top center",
             end: "bottom top",
-            markers: true,
+            markers: false,
             scrub: 1,
           },
         });
@@ -721,7 +731,7 @@
             trigger: ".parallax__item__right",
             start: "top center",
             end: "bottom top",
-            markers: true,
+            markers: false,
             scrub: 1,
           },
         });
@@ -737,7 +747,7 @@
               trigger: ".parallax__item__left2",
               start: "top center",
               end: "bottom top",
-              markers: true,
+              markers: false,
               scrub: 1,
             },
           },
@@ -870,38 +880,38 @@
         start: "top top",
         end: "+=8000",
         scrub: 2,
-        markers: true,
+        markers: false,
       });
     </script>
 
     <!-- section3 script -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-        let sections = gsap.utils.toArray("#section3 .port");
-        let totalWidth = 0;
+    let sections = gsap.utils.toArray("#section3 .port");
+    let totalWidth = 0;
 
-        sections.forEach((section) => {
-          totalWidth += section.offsetWidth;
-        });
+    sections.forEach((section) => {
+      totalWidth += section.offsetWidth + 20; // Add margin-right to total width
+    });
 
-        gsap.to("#section3 .port-wrap", {
-          x: () => -(totalWidth - window.innerWidth),
-          ease: "none",
-          scrollTrigger: {
-            trigger: "#section3",
-            pin: true,
-            scrub: 3,
-            start: "top 65.8px", // start scrolling after header height of 65.8px
-            end: () => "+=" + (totalWidth - window.innerWidth),
-            markers: false, // 디버깅을 위해 마커 추가
-          },
-        });
-      });
+    gsap.to("#section3 .port-wrap", {
+      x: () => -(totalWidth - window.innerWidth),
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#section3",
+        pin: true,
+        scrub: 3,
+        start: "top 65.8px", // start scrolling after header height of 65.8px
+        end: () => "+=" + (totalWidth - window.innerWidth),
+        markers: false, // 디버깅을 위해 마커 추가
+      },
+    });
+  });
     </script>
-    <!-- section4 script -->
 
+    <!-- section4 script -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         gsap.registerPlugin(ScrollTrigger);
@@ -965,42 +975,36 @@
         });
       });
     </script>
+
     <!-- section5 script -->
-
     <script>
-      // Intersection Observer 설정
-      document.addEventListener("DOMContentLoaded", () => {
-        const header = document.getElementById("header");
-        const weatherElements = document.getElementsByClassName("weather");
-        const section5 = document.getElementById("section5");
+ document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
 
-        // Observer 설정
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                header.classList.add("active");
-                for (let i = 0; i < weatherElements.length; i++) {
-                  weatherElements[i].classList.add("active");
-                }
-              } else {
-                header.classList.remove("active");
+    // section5 초기 설정
+    gsap.set("#section5 .desc .word", { opacity: 0 });
 
-                for (let i = 0; i < weatherElements.length; i++) {
-                  weatherElements[i].classList.remove("active");
-                }
-              }
-            });
-          },
-          {
-            threshold: 0.41,
-          }
-        );
+    // section5 애니메이션 타임라인 설정
+    const t5 = gsap.timeline();
 
-        // section5를 관찰하기 시작
-        observer.observe(section5);
-      });
+    t5.to("#section5 .desc .word", {
+        opacity: 1,
+        duration: 1,
+        stagger:{ amount:1 ,from:"random"},
+        ease: "expo.Out",
+    });
+
+    // section5에 ScrollTrigger 생성
+    ScrollTrigger.create({
+        animation: t5,
+        trigger: "#section5",
+        start: "top bottom", // section5의 상단이 뷰포트의 80%에 닿을 때 애니메이션 시작
+        end: "center top", // section5의 하단이 뷰포트의 20%에 닿을 때 애니메이션 종료
+        scrub: true,
+        markers: false, // 디버깅을 위해 마커 추가
+    });
+});
     </script>
-    <!-- color change -->
+
   </body>
 </html>
