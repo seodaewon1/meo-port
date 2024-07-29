@@ -126,7 +126,7 @@
       <div class="port-wrap">
         <div class="port p1">
           <div class="mockup"></div>
-          <img src="./assets/img/Frame01.jpeg" alt="#" />
+          <img src="./assets/img/Frame01.jpg" alt="#" />
           <div class="info">
             <h5>{ PlayList}</h5>
             <p>
@@ -674,7 +674,7 @@
       gsap.set("#header", { top: "-20vw" });
       gsap.set(".weather", { right: "-20vw" });
       gsap.set("#section1 .img", { opacity: 0, y: 300 });
-      gsap.set("#section1 .t1", { opacity: 0, x:350, y: 200 });
+      gsap.set("#section1 .t1", { opacity: 0, y: 200 });
       gsap.set("#section1 .t2", { opacity: 0, y: 200 });
       gsap.set("#section1 .t3", { opacity: 0, y: 200 });
       const tl = gsap.timeline();
@@ -683,78 +683,82 @@
         tl.to("#section1 .desc .char", {
           opacity: 1,
           y: 0,
-          duration: 2,
-          stagger: { amount: 1, from: "random" },
-          ease: "expo.out",
+          duration: 1, 
+          stagger: { amount: 1, from: "random" }, 
+          ease: "sine.inOut",
         })
-          .to("#header", { top: 0, ease: "power3.Out" })
-          .to(".weather", { right: 20, ease: "power3.Out" })
-          .to("#section1 .t1", { opacity: 1, y: 0, ease: "power3.Out" })
-          .to("#section1 .img", { opacity: 1, y: 0, ease: "power3.Out" })
-          .to("#section1 .t2", { opacity: 1, y: 0, ease: "power3.Out" })
-          .to("#section1 .t3", { opacity: 1, y: 0, ease: "power3.Out" });
+          .to("#header", { top: 0, ease: "sine.inOut", duration: 1 })
+          .to(".weather", { right: 20, ease: "sine.inOut", duration: 1 })
+          .to("#section1 .img", { opacity: 1, y: 0, ease: "sine.inOut", duration: 1 })
+          .to("#section1 .t1", { opacity: 1, y: 0, ease: "sine.inOut", duration: 1 })
+          .to("#section1 .t2", { opacity: 1, y: 0, ease: "sine.inOut", duration: 1 })
+          .to("#section1 .t3", { opacity: 1, y: 0, ease: "sine.inOut", duration: 1 });
       }, 1000);
-     
-      gsap.utils.toArray(".parallax__item__desc").forEach((item) => {
-        gsap.to(item, {
-          yPercent: -50,
-          ease: "power4.out",
-          duration: 1,
-          scrollTrigger: {
-            trigger: ".parallax__item__desc",
-            start: "top bottom",
-            end: "bottom top",
-            markers: false,
-            scrub: 1,
-          },
-        });
-      });
-      gsap.utils.toArray(".parallax__item__left").forEach((item) => {
-        gsap.to(item, {
-          xPercent: -50,
-          ease: "power4.out",
-          duration: 1,
-          scrollTrigger: {
-            trigger: ".parallax__item__left",
-            start: "top bottom",
-            end: "bottom top",
-            markers: false,
-            scrub: 1,
-          },
-        });
-      });
-      gsap.utils.toArray(".parallax__item__right").forEach((item) => {
-        gsap.to(item, {
-          xPercent: 50,
-          ease: "power4.out",
-          duration: 1,
-          scrollTrigger: {
-            trigger: ".parallax__item__right",
-            start: "top bottom",
-            end: "bottom top",
-            markers: false,
-            scrub: 1,
-          },
-        });
-      });
-      gsap.utils.toArray(".parallax__item__left2").forEach((item) => {
-        gsap.to(
-          item,
-          {
-            xPercent: -50,
-            ease: "power4.out",
-            duration: 1,
+
+        gsap.utils.toArray(".parallax__item__desc").forEach((item) => {
+          gsap.to(item, {
+            yPercent: -50,
+            ease: "sine.inOut",
+            duration: 1, 
             scrollTrigger: {
-              trigger: ".parallax__item__left2",
+              trigger: ".parallax__item__desc",
               start: "top bottom",
-            end: "bottom top",
-            markers: false,
-            scrub: 1,
+              end: "bottom top",
+              markers: false,
+              scrub: 2, 
             },
-          },
-          0.8
-        );
-      });
+          });
+        });
+
+        gsap.utils.toArray(".parallax__item__left").forEach((item) => {
+          gsap.to(item, {
+            xPercent: -50,
+            ease: "sine.inOut", 
+            duration: 1, 
+            scrollTrigger: {
+              trigger: ".parallax__item__left",
+              start: "top bottom",
+              end: "bottom top",
+              markers: false,
+              scrub: 2, 
+            },
+          });
+        });
+
+        gsap.utils.toArray(".parallax__item__right").forEach((item) => {
+          gsap.to(item, {
+            xPercent: 50,
+            ease: "sine.inOut", 
+            duration: 1, 
+            scrollTrigger: {
+              trigger: ".parallax__item__right",
+              start: "top bottom",
+              end: "bottom top",
+              markers: false,
+              scrub: 2, 
+            },
+          });
+        });
+
+        gsap.utils.toArray(".parallax__item__left2").forEach((item) => {
+          gsap.to(
+            item,
+            {
+              xPercent: -50,
+              ease: "sine.inOut", 
+              duration: 2,
+              scrollTrigger: {
+                trigger: ".parallax__item__left2",
+                start: "top bottom",
+                end: "bottom top",
+                markers: false,
+                scrub: 2,
+              },
+            },
+            0.8
+          );
+        });
+
     </script>
 
     <!-- section2 script -->
