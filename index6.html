@@ -125,7 +125,8 @@
       <h4>{ 포트폴리오 }</h4>
       <div class="port-wrap">
         <div class="port p1">
-          <img src="./assets/img/Frame01.jpg" alt="#" />
+          <div class="mockup"></div>
+          <img src="./assets/img/Frame01.jpeg" alt="#" />
           <div class="info">
             <h5>{ PlayList}</h5>
             <p>
@@ -134,8 +135,8 @@
             </p>
           </div>
           <div class="skill">
-            <span><a href="https://github.com/seodaewon1/playlist"></a>CODEVIEW </a></span>
-            <span><a href="https://attraction-three.vercel.app/">SITEVIEW</a></span>
+            <span><a href="https://github.com/seodaewon1/playlist" target="_blank" rel="noopener noreferrer">CODEVIEW </a></span>
+            <span><a href="https://playlist-topaz.vercel.app/" target="_blank" rel="noopener noreferrer">SITEVIEW</a></span>
           </div>
         </div>
 
@@ -151,8 +152,8 @@
             </p>
           </div>
           <div class="skill">
-            <span> <a href="https://github.com/seodaewon1/attraction"> CODEVIEW</a></span>
-            <span><a href="https://attraction-three.vercel.app/">SITEVIEW</a></span>
+            <span><a href="https://github.com/seodaewon1/attraction" target="_blank" rel="noopener noreferrer">CODEVIEW</a></span>
+            <span><a href="https://attraction-rosy.vercel.app/"  target="_blank" rel="noopener noreferrer">SITEVIEW</a></span>
           </div>
         </div>
         <div class="port p3">
@@ -166,8 +167,8 @@
             </p>
           </div>
           <div class="skill">
-             <span><a href="https://github.com/seodaewon1/booking">CODEVIEW</a></span>
-            <span><a href="https://booking-ruddy.vercel.app/">SITEVIEW</a></span>
+             <span><a href="https://github.com/seodaewon1/booking" target="_blank" rel="noopener noreferrer">CODEVIEW</a></span>
+            <span><a href="https://booking-ruddy.vercel.app/" target="_blank" rel="noopener noreferrer">SITEVIEW</a></span>
           </div>
         </div>
         <div class="port p4">
@@ -181,8 +182,8 @@
             </p>
           </div>
           <div class="skill">
-             <span><a href="https://github.com/seodaewon1/vue-port">CODEVIEW</a></span>
-            <span><a href="https://vue-port-sandy.vercel.app/">SITEVIEW</a></span>
+             <span><a href="https://github.com/seodaewon1/vue-port" target="_blank" rel="noopener noreferrer">CODEVIEW</a></span>
+            <span><a href="https://vue-port-sandy.vercel.app/" target="_blank" rel="noopener noreferrer">SITEVIEW</a></span>
           </div>
         </div>
         <div class="port p5">
@@ -196,8 +197,8 @@
             </p>
           </div>
           <div class="skill">
-             <span><a href="https://github.com/seodaewon1/mvking-vue">CODEVIEW</a></span>
-            <span><a href="https://mvking-vue.vercel.app/">SITEVIEW</a></span>
+             <span><a href="https://github.com/seodaewon1/mvking-vue" target="_blank" rel="noopener noreferrer">CODEVIEW</a></span>
+            <span><a href="https://mvking-vue.vercel.app/" target="_blank" rel="noopener noreferrer">SITEVIEW</a></span>
           </div>
         </div>
         <div class="port p6">
@@ -210,8 +211,8 @@
             </p>
           </div>
           <div class="skill">
-             <span><a href="">CODEVIEW</a></span>
-            <span><a href="">SITEVIEW</a></span>
+             <span><a href="#" target="_blank" rel="noopener noreferrer">업로드 예정</a></span>
+            <span><a href="#" target="_blank" rel="noopener noreferrer">업로드 예정</a></span>
           </div>
         </div>
         <div class="port p7">
@@ -225,8 +226,8 @@
             </p>
           </div>
           <div class="skill">
-             <span><a href="">CODEVIEW</a></span>
-            <span><a href="">SITEVIEW</a></span>
+             <span><a href="#" target="_blank" rel="noopener noreferrer">업로드 예정</a></span>
+            <span><a href="#" target="_blank" rel="noopener noreferrer">업로드 예정</a></span>
           </div>
         </div>
       </div>
@@ -491,7 +492,7 @@
     </div>
     <!-- //section6 -->
 
-    <div id="section7">
+    <!-- <div id="section7">
         <span>SAY bye!</span>
         <div class="bottom">
             <ul>
@@ -501,7 +502,7 @@
                 <li><a href="#">contact</a></li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- //section7 -->
 
     <!-- <div class="modal__wrap">
@@ -673,7 +674,7 @@
       gsap.set("#header", { top: "-20vw" });
       gsap.set(".weather", { right: "-20vw" });
       gsap.set("#section1 .img", { opacity: 0, y: 300 });
-      gsap.set("#section1 .t1", { opacity: 0, y: 200 });
+      gsap.set("#section1 .t1", { opacity: 0, x:350, y: 200 });
       gsap.set("#section1 .t2", { opacity: 0, y: 200 });
       gsap.set("#section1 .t3", { opacity: 0, y: 200 });
       const tl = gsap.timeline();
@@ -693,18 +694,18 @@
           .to("#section1 .t2", { opacity: 1, y: 0, ease: "power3.Out" })
           .to("#section1 .t3", { opacity: 1, y: 0, ease: "power3.Out" });
       }, 1000);
-
+     
       gsap.utils.toArray(".parallax__item__desc").forEach((item) => {
         gsap.to(item, {
           yPercent: -50,
           ease: "power4.out",
-          duration: 0.5,
+          duration: 1,
           scrollTrigger: {
             trigger: ".parallax__item__desc",
-            start: "top center",
+            start: "top bottom",
             end: "bottom top",
             markers: false,
-            scrub: true,
+            scrub: 1,
           },
         });
       });
@@ -715,7 +716,7 @@
           duration: 1,
           scrollTrigger: {
             trigger: ".parallax__item__left",
-            start: "top center",
+            start: "top bottom",
             end: "bottom top",
             markers: false,
             scrub: 1,
@@ -729,7 +730,7 @@
           duration: 1,
           scrollTrigger: {
             trigger: ".parallax__item__right",
-            start: "top center",
+            start: "top bottom",
             end: "bottom top",
             markers: false,
             scrub: 1,
@@ -745,10 +746,10 @@
             duration: 1,
             scrollTrigger: {
               trigger: ".parallax__item__left2",
-              start: "top center",
-              end: "bottom top",
-              markers: false,
-              scrub: 1,
+              start: "top bottom",
+            end: "bottom top",
+            markers: false,
+            scrub: 1,
             },
           },
           0.8
