@@ -995,7 +995,7 @@
     t5.to("#section5 .desc .word", {
         opacity: 1,
         duration: 1,
-        stagger:{ amount:1 ,from:"random"},
+        stagger: { amount: 1, from: "random" },
         ease: "expo.Out",
     });
 
@@ -1003,31 +1003,44 @@
     ScrollTrigger.create({
         animation: t5,
         trigger: "#section5",
-        start: "top bottom", // section5의 상단이 뷰포트의 80%에 닿을 때 애니메이션 시작
-        end: "20% top", // section5의 하단이 뷰포트의 20%에 닿을 때 애니메이션 종료
+        start: "top top",
+        end: "30% top",
         scrub: true,
-        markers: false, // 디버깅을 위해 마커 추가
+        markers: false,
+        onEnter: () => {
+            document.querySelector('#header').classList.add('white-theme');
+            document.querySelector('.weather').classList.add('white-theme');
+        },
+        onLeaveBack: () => {
+            document.querySelector('#header').classList.remove('white-theme');
+            document.querySelector('.weather').classList.remove('white-theme');
+        }
+    });
+
+    // 퍼센트 애니메이션을 dt 요소에 연결하기
+    const skilldata = document.querySelectorAll("dt");
+    skilldata.forEach(dt => {
+        const gauge = dt.querySelector(".gauge");
+        if (gauge) {
+            const finalPercent = gauge.dataset.percent;
+            gsap.fromTo(gauge, {
+                textContent: "0%"
+            }, {
+                textContent: finalPercent + "%",
+                snap: "textContent",
+                scrollTrigger: {
+                    trigger: dt,
+                    start: "top 80%", // dt 요소의 상단이 뷰포트의 80%에 닿을 때 애니메이션 시작
+                    end: "bottom 20%", // dt 요소의 하단이 뷰포트의 20%에 닿을 때 애니메이션 종료
+                    toggleActions: "play none none none",
+                },
+                ease: "none",
+                duration: 2
+            });
+        }
     });
 });
 
-    const skilldata = document.querySelectorAll(".gauge");
-    skilldata.forEach(skill => {
-        const finalPercent = skill.dataset.percent;
-        gsap.fromTo(skill, {
-            textContent: "0%"
-        }, {
-            textContent: finalPercent + "%",
-            snap: "textContent",
-            scrollTrigger: {
-                trigger: skill.parentNode,
-                start: "top 20%",
-                end: "bottom center",
-                toggleActions: "play none none none",
-            },
-            ease: "none",
-            duration: 2
-        });
-    });
     </script>
 
   </body>

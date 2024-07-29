@@ -12,6 +12,10 @@ body {
   color: #2e85e7;
   overflow: hidden;
 }
+.white-theme {
+  color: white !important;
+  border-color: white !important;
+}
 #header {
   position: fixed;
   left: 20px;
