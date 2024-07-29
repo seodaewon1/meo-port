@@ -101,7 +101,7 @@ body {
 #section1 .text .img {
   position: absolute;
   left: 50vw;
-  top: 5vw;
+  top: 10vw;
   width: 40vw;
   background-color: #000;
   overflow: hidden;
@@ -172,8 +172,6 @@ body {
 }
 
 /* section3 */
-#section3 {
-}
 
 #section3 h4 {
   padding: 16px 23px 0;
@@ -370,8 +368,10 @@ body {
 
 .sec5-text .text-right dt {
   font-family: "iceJaram-Rg";
-  font-size: 7vw;
+  font-size: 6vw;
   margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .sec5-text .text-right dt.noTop {
@@ -469,9 +469,6 @@ body {
   border-radius: 3px;
 }
 
-.comment-wrap {
-}
-
 .comment-wrap .comment {
   margin-top: 100px;
 }
@@ -520,9 +517,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
-}
-
-.comment-wrap .comment form {
 }
 
 .comment-wrap .comment form legend {

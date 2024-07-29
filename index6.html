@@ -12,7 +12,7 @@
   <body>
     <header id="header">
       <div class="left">
-        <h1><a href="/">FRONT+END</a></h1>
+        <h1><a href="https://seodaewon1.github.io/meo-port/index6.html">FRONT+END</a></h1>
       </div>
       <ul>
         <li><a href="#section2">About</a></li>
@@ -312,7 +312,7 @@
         </div>
         <div class="text-right">
           <dl>
-            <dt class="noTop">{ Html & CSS }</dt>
+            <dt class="noTop">{ Html & CSS } <p class="gauge" data-percent="99"></p></dt>
             <dd>
               HTML과 CSS를 사용하여 웹 페이지의 구조와 스타일을 설계하고
               구현했습니다. 시맨틱 마크업을 사용하여 접근성과 SEO를 고려한 웹
@@ -326,7 +326,7 @@
             </dd>
           </dl>
           <dl>
-            <dt class="noTop">{ JavaScript }</dt>
+            <dt class="noTop">{ JavaScript } <p class="gauge" data-percent="90"></p></dt>
             <dd>
               JavaScript를 사용하여 다양한 웹 애플리케이션을 개발했습니다. ES6+
               문법을 적극 활용하여 클린하고 효율적인 코드를 작성했으며, 비동기
@@ -338,7 +338,7 @@
             </dd>
           </dl>
           <dl>
-            <dt>{ PHP & MySQL }</dt>
+            <dt>{ PHP & MySQL }<p class="gauge" data-percent="70"></p></dt>
             <dd>
               PHP와 MySQL을 사용하여 안정적이고 확장 가능한 백엔드 시스템을
               구축했습니다. Laravel과 같은 PHP 프레임워크를 사용하여 MVC
@@ -351,7 +351,7 @@
             </dd>
           </dl>
           <dl>
-            <dt>{ React.js }</dt>
+            <dt>{ React.js } <p class="gauge" data-percent="80"></p></dt>
             <dd>
               React.js를 활용하여 모던 웹 애플리케이션을 구축한 경험이
               풍부합니다. 컴포넌트 기반 아키텍처를 통해 재사용성과 유지보수성을
@@ -364,7 +364,7 @@
             </dd>
           </dl>
           <dl>
-            <dt>{ Node.js }</dt>
+            <dt>{ Node.js } <p class="gauge" data-percent="70"></p></dt>
             <dd>
               Node.js로 고성능 서버 애플리케이션을 개발했습니다. Express.js와
               같은 프레임워크를 사용하여 RESTful API를 구축하고, 실시간 데이터
@@ -376,7 +376,7 @@
             </dd>
           </dl>
           <dl>
-            <dt>{ Next.js }</dt>
+            <dt>{ Next.js } <p class="gauge" data-percent="70"></p></dt>
             <dd>
               Next.js를 사용하여 서버 사이드 렌더링과 정적 사이트 생성 기능을
               갖춘 웹 애플리케이션을 개발했습니다. 페이지 기반 라우팅 시스템을
@@ -672,7 +672,7 @@
       gsap.set("#section1 .desc .char", { opacity: 0, y: 200 });
       gsap.set("#header", { top: "-20vw" });
       gsap.set(".weather", { right: "-20vw" });
-      gsap.set("#section1 .img", { opacity: 0, y: 200 });
+      gsap.set("#section1 .img", { opacity: 0, y: 300 });
       gsap.set("#section1 .t1", { opacity: 0, y: 200 });
       gsap.set("#section1 .t2", { opacity: 0, y: 200 });
       gsap.set("#section1 .t3", { opacity: 0, y: 200 });
@@ -878,7 +878,7 @@
         trigger: "#section2",
         pin: true,
         start: "top top",
-        end: "+=8000",
+        end: "+=10000",
         scrub: 2,
         markers: false,
       });
@@ -999,11 +999,30 @@
         animation: t5,
         trigger: "#section5",
         start: "top bottom", // section5의 상단이 뷰포트의 80%에 닿을 때 애니메이션 시작
-        end: "center top", // section5의 하단이 뷰포트의 20%에 닿을 때 애니메이션 종료
+        end: "20% top", // section5의 하단이 뷰포트의 20%에 닿을 때 애니메이션 종료
         scrub: true,
         markers: false, // 디버깅을 위해 마커 추가
     });
 });
+
+    const skilldata = document.querySelectorAll(".gauge");
+    skilldata.forEach(skill => {
+        const finalPercent = skill.dataset.percent;
+        gsap.fromTo(skill, {
+            textContent: "0%"
+        }, {
+            textContent: finalPercent + "%",
+            snap: "textContent",
+            scrollTrigger: {
+                trigger: skill.parentNode,
+                start: "top 20%",
+                end: "bottom center",
+                toggleActions: "play none none none",
+            },
+            ease: "none",
+            duration: 2
+        });
+    });
     </script>
 
   </body>
