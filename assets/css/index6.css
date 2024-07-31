@@ -87,11 +87,11 @@ body {
   padding: 7% 3%;
 }
 #section1 .desc {
-  font-size: 3.3vw;
+  font-size: 3vw;
   line-height: 1.2;
   font-family: "gmarket";
   font-weight: 100;
-  letter-spacing: -0.3vw;
+  letter-spacing: -0.2vw;
 }
 #section1 .text {
   margin-top: 10%;
@@ -130,7 +130,6 @@ body {
   left: 50vw;
   top: 50vh;
   transform: translate(-50%, -50%);
-  width: 45vw;
 }
 #section2 .about1 h4,
 #section2 .about1 p {
