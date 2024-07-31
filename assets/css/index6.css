@@ -16,6 +16,10 @@ body {
   color: white !important;
   border-color: white !important;
 }
+.blue-theme {
+  color: #2e85e7 !important;
+  border-color: #2e85e7 !important;
+}
 #header {
   position: fixed;
   left: 20px;
@@ -196,7 +200,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  }
+}
 .port-wrap .port::after {
   content: "";
   width: 100%;
