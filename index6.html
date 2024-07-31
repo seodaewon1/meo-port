@@ -330,9 +330,6 @@
       <div class="section4__text">
         <div class="text__code">code</div>
         <div class="text__list">list</div>
-        <div class="imgWrap">
-          <div class="img"></div>
-        </div>
       </div>
       <div class="list">
         <ul>
@@ -658,14 +655,14 @@
 
     <div id="section7">
       <span>SAY bye!</span>
-      <div class="bottom">
+      <!-- <div class="bottom">
         <ul>
           <li><a href="#">about</a></li>
           <li><a href="#">project</a></li>
           <li><a href="#">site</a></li>
           <li><a href="#">contact</a></li>
         </ul>
-      </div>
+      </div> -->
     </div>
     <!-- //section7 -->
 
@@ -776,33 +773,6 @@
           });
         });
       });
-      const img = document.querySelector(".imgWrap .img");
-
-      gsap.to(img, {
-        scrollTrigger: {
-          trigger: img,
-          start: "top center",
-          end: "bottom top",
-          scrub: true,
-        },
-        yPercent: -10,
-        scale: 1.2,
-        ease: "none",
-      });
-
-      gsap.to(".imgWrap", {
-        yPercent: -50,
-        ease: "none",
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: "#section1",
-          start: "top bottom",
-          ene: "bottom top",
-          markers: false,
-          scrub: true,
-        },
-      });
-
       gsap.to(".weather", {
         yPercent: 100,
         ease: "none",
@@ -1208,11 +1178,11 @@
           end: "30% top",
           onEnter: () => {
             document.querySelector("#header").classList.add("white-theme");
-            document.querySelector(".weather").classList.add("blue-theme");
+            document.querySelector(".weather").classList.add("white-theme");
           },
           onLeaveBack: () => {
             document.querySelector("#header").classList.remove("white-theme");
-            document.querySelector(".weather").classList.remove("blue-theme");
+            document.querySelector(".weather").classList.remove("white-theme");
           },
         });
 
