@@ -554,6 +554,7 @@ body {
   width: 49%;
   padding: 10px;
   font-family: "IropkeBatang";
+  color: #e0e0e0;
 }
 
 .comment__form .text textarea {
@@ -564,6 +565,7 @@ body {
   resize: none;
   padding: 10px;
   font-family: "IropkeBatang";
+  color: #e0e0e0;
 }
 
 .comment__form button {
