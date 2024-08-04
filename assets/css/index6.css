@@ -728,10 +728,6 @@ body {
   }
 }
 
-body {
-  height: 200vh;
-}
-
 .no-scroll-y {
   overflow-y: hidden;
 }
@@ -757,10 +753,10 @@ body {
 
 /* Spinner cargando */
 .ctn-preloader .animation-preloader .spinner {
-  animation: spinner 1s infinite linear;
+  animation: spinner 2s infinite linear; /* Duration changed from 1s to 2s */
   border-radius: 50%;
   border: 3px solid rgba(0, 0, 0, 0.2);
-  border-top-color: #2e85e7; /* No se identa por orden alfabetico para que no lo sobre-escriba */
+  border-top-color: #2e85e7;
   height: 9em;
   margin: 0 auto 3.5em auto;
   width: 9em;
@@ -774,7 +770,7 @@ body {
 }
 
 .ctn-preloader .animation-preloader .txt-loading .letters-loading:before {
-  animation: letters-loading 4s infinite;
+  animation: letters-loading 8s infinite; /* Duration changed from 4s to 8s */
   color: #2e85e7;
   content: attr(data-text-preloader);
   left: 0;
@@ -793,42 +789,42 @@ body {
   .animation-preloader
   .txt-loading
   .letters-loading:nth-child(2):before {
-  animation-delay: 0.2s;
+  animation-delay: 0.4s; /* Delay changed from 0.2s to 0.4s */
 }
 
 .ctn-preloader
   .animation-preloader
   .txt-loading
   .letters-loading:nth-child(3):before {
-  animation-delay: 0.4s;
+  animation-delay: 0.8s; /* Delay changed from 0.4s to 0.8s */
 }
 
 .ctn-preloader
   .animation-preloader
   .txt-loading
   .letters-loading:nth-child(4):before {
-  animation-delay: 0.6s;
+  animation-delay: 1.2s; /* Delay changed from 0.6s to 1.2s */
 }
 
 .ctn-preloader
   .animation-preloader
   .txt-loading
   .letters-loading:nth-child(5):before {
-  animation-delay: 0.8s;
+  animation-delay: 1.6s; /* Delay changed from 0.8s to 1.6s */
 }
 
 .ctn-preloader
   .animation-preloader
   .txt-loading
   .letters-loading:nth-child(6):before {
-  animation-delay: 1s;
+  animation-delay: 2s; /* Delay changed from 1s to 2s */
 }
 
 .ctn-preloader
   .animation-preloader
   .txt-loading
   .letters-loading:nth-child(7):before {
-  animation-delay: 1.2s;
+  animation-delay: 2.4s; /* Delay changed from 1.2s to 2.4s */
 }
 
 .ctn-preloader .loader-section {
@@ -879,7 +875,6 @@ body {
     opacity: 0;
     transform: rotateY(-90deg);
   }
-
   25%,
   50% {
     opacity: 1;

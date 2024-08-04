@@ -786,12 +786,12 @@
           if ($("#ctn-preloader").hasClass("loaded")) {
             // Es para que una vez que se haya ido el preloader se elimine toda la seccion preloader
             $("#preloader")
-              .delay(1000)
+              .delay(2000)
               .queue(function () {
                 $(this).remove();
               });
           }
-        }, 3000);
+        }, 8000);
       });
     </script>
     <script>
@@ -857,7 +857,7 @@
           opacity: 1,
           y: 0,
           duration: 1,
-          delay: 3,
+          delay: 8,
           stagger: { amount: 1, from: "random" },
           ease: "sine.inOut",
         })
